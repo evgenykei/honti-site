@@ -18,7 +18,7 @@
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
       background:var(--bg);
       color:var(--text);
       line-height:1.45;
@@ -40,17 +40,8 @@
       justify-content:space-between;
       gap:24px;
     }
-    .brand{
-      font-size:20px;
-      font-weight:800;
-      letter-spacing:.12em;
-    }
-    .navlinks{
-      display:flex;
-      gap:28px;
-      font-size:14px;
-      color:var(--muted);
-    }
+    .brand{font-size:20px;font-weight:800;letter-spacing:.12em}
+    .navlinks{display:flex;gap:28px;font-size:14px;color:var(--muted)}
     .navlinks a:hover{color:var(--text)}
     .hero{
       min-height:72vh;
@@ -58,13 +49,7 @@
       align-items:center;
       padding:80px 0 60px;
     }
-    .eyebrow{
-      font-size:13px;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      color:var(--muted);
-      margin-bottom:18px;
-    }
+    .eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
     h1{
       margin:0;
       max-width:900px;
@@ -73,19 +58,8 @@
       letter-spacing:-.055em;
       font-weight:760;
     }
-    .lead{
-      margin-top:30px;
-      max-width:720px;
-      font-size:clamp(18px,2vw,26px);
-      line-height:1.35;
-      color:#3f4449;
-    }
-    .hero-actions{
-      margin-top:34px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-    }
+    .lead{margin-top:30px;max-width:720px;font-size:clamp(18px,2vw,26px);line-height:1.35;color:#3f4449}
+    .hero-actions{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}
     .btn{
       display:inline-flex;
       align-items:center;
@@ -99,57 +73,26 @@
     }
     .btn.primary{background:var(--text);color:white}
     .btn.secondary{background:transparent}
-    section{
-      padding:88px 0;
-      border-top:1px solid var(--line);
-    }
-    .section-kicker{
-      font-size:13px;
-      text-transform:uppercase;
-      letter-spacing:.14em;
-      color:var(--muted);
-      margin-bottom:32px;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:16px;
-    }
-    .card{
-      background:var(--card);
-      border:1px solid #e5e6e7;
-      border-radius:22px;
-      padding:28px;
-      min-height:220px;
-    }
-    .card h3{
-      margin:0 0 18px;
-      font-size:24px;
-      letter-spacing:-.02em;
-    }
-    .card p{
-      margin:0;
-      color:var(--muted);
-      font-size:16px;
-    }
-    .big-copy{
-      max-width:940px;
-      font-size:clamp(30px,4.6vw,62px);
-      line-height:1.06;
-      letter-spacing:-.04em;
-      margin:0;
-    }
+    section{padding:88px 0;border-top:1px solid var(--line)}
+    .section-kicker{font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:32px}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .card{background:var(--card);border:1px solid #e5e6e7;border-radius:22px;padding:28px;min-height:220px}
+    .card h3{margin:0 0 18px;font-size:24px;letter-spacing:-.02em}
+    .card p{margin:0;color:var(--muted);font-size:16px}
+    .big-copy{max-width:940px;font-size:clamp(30px,4.6vw,62px);line-height:1.06;letter-spacing:-.04em;margin:0}
+    .product-stack{display:grid;gap:18px}
     .product-panel{
       display:grid;
       grid-template-columns:1.15fr .85fr;
       gap:48px;
       align-items:end;
-      background:#111214;
-      color:#fff;
       border-radius:30px;
       padding:48px;
     }
-    .product-panel .section-kicker{color:#989da3;margin-bottom:22px}
+    .product-panel.dark{background:#111214;color:#fff}
+    .product-panel.light{background:#fff;color:#111214;border:1px solid #e5e6e7}
+    .product-panel.dark .section-kicker{color:#989da3;margin-bottom:22px}
+    .product-panel.light .section-kicker{color:#71767c;margin-bottom:22px}
     .product-panel h2{
       margin:0;
       max-width:760px;
@@ -157,17 +100,16 @@
       line-height:.98;
       letter-spacing:-.05em;
     }
-    .product-panel p{margin:20px 0 0;max-width:620px;color:#b6bbc0;font-size:18px}
+    .product-panel p{margin:20px 0 0;max-width:650px;font-size:18px}
+    .product-panel.dark p{color:#b6bbc0}
+    .product-panel.light p{color:#60656a}
     .product-side{display:flex;flex-direction:column;align-items:flex-start;gap:28px}
-    .product-flow{font-size:13px;line-height:1.8;color:#a6abb0;letter-spacing:.02em}
-    .product-panel .btn{border-color:#fff}.product-panel .btn.primary{background:#fff;color:#111214}
-    .product-note{font-size:12px;color:#7f858a;max-width:330px}
-    .contact{
-      display:grid;
-      grid-template-columns:1.4fr .6fr;
-      gap:32px;
-      align-items:end;
-    }
+    .product-flow{font-size:13px;line-height:1.8;letter-spacing:.02em}
+    .dark .product-flow{color:#a6abb0}.light .product-flow{color:#74797f}
+    .product-panel.dark .btn{border-color:#fff}.product-panel.dark .btn.primary{background:#fff;color:#111214}
+    .product-note{font-size:12px;max-width:360px}
+    .dark .product-note{color:#7f858a}.light .product-note{color:#858a8f}
+    .contact{display:grid;grid-template-columns:1.4fr .6fr;gap:32px;align-items:end}
     .contact-mail{
       display:inline-block;
       margin-top:28px;
@@ -176,23 +118,9 @@
       letter-spacing:-.035em;
       border-bottom:2px solid currentColor;
     }
-    .meta{
-      color:var(--muted);
-      font-size:14px;
-      text-align:right;
-    }
-    footer{
-      padding:28px 0 38px;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      font-size:13px;
-    }
-    .footer-row{
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-    }
+    .meta{color:var(--muted);font-size:14px;text-align:right}
+    footer{padding:28px 0 38px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     @media(max-width:800px){
       .navlinks{display:none}
       .hero{min-height:auto;padding:72px 0}
@@ -211,7 +139,7 @@
         <a class="brand" href="#">ХОНТИ</a>
         <div class="navlinks">
           <a href="#expertise">Экспертиза</a>
-          <a href="/analyzer/">Продукт</a>
+          <a href="#products">Продукты</a>
           <a href="#about">О компании</a>
           <a href="#contact">Контакты</a>
         </div>
@@ -259,18 +187,34 @@
       </div>
     </section>
 
-    <section id="product">
+    <section id="products">
       <div class="wrap">
-        <div class="product-panel">
-          <div>
-            <div class="section-kicker">Продукт · HONTI Analyzer</div>
-            <h2>Сложная система — как единая карта.</h2>
-            <p>Графовая модель SAP-ландшафта для анализа зависимостей, data lineage и подготовки изменений и миграции.</p>
+        <div class="section-kicker">Собственные продукты</div>
+        <div class="product-stack">
+          <div class="product-panel dark">
+            <div>
+              <div class="section-kicker">HONTI Analyzer</div>
+              <h2>Сложная система — как единая карта.</h2>
+              <p>Графовая модель SAP-ландшафта для анализа зависимостей, data lineage и подготовки изменений и миграции.</p>
+            </div>
+            <div class="product-side">
+              <div class="product-flow">SAP / BW / HANA<br/>↓<br/>Objects & Dependencies<br/>↓<br/>HONTI Analyzer</div>
+              <a class="btn primary" href="/analyzer/">Посмотреть HONTI Analyzer</a>
+              <div class="product-note">Работающий MVP · отдельные функции автоматизированного анализа находятся в развитии.</div>
+            </div>
           </div>
-          <div class="product-side">
-            <div class="product-flow">SAP / BW / HANA<br/>↓<br/>Objects & Dependencies<br/>↓<br/>HONTI Analyzer</div>
-            <a class="btn primary" href="/analyzer/">Посмотреть HONTI Analyzer</a>
-            <div class="product-note">Работающий MVP · отдельные функции автоматизированного анализа находятся в развитии.</div>
+
+          <div class="product-panel light">
+            <div>
+              <div class="section-kicker">R&amp;D · HONTI Assistant</div>
+              <h2>Корпоративные системы — через естественный язык.</h2>
+              <p>On-premise AI-интерфейс для SAP и других корпоративных систем: локальная LLM, контролируемые действия через набор разрешённых инструментов и работа внутри периметра заказчика.</p>
+            </div>
+            <div class="product-side">
+              <div class="product-flow">Web / MAX / Corporate channels<br/>↓<br/>Local LLM + Policy<br/>↓<br/>SAP / DWH / ITSM</div>
+              <a class="btn secondary" href="#contact">Обсудить HONTI Assistant</a>
+              <div class="product-note">Развивается на базе ранее реализованного SAP-bot MVP. Целевой режим — on-premise, без передачи корпоративных данных во внешние AI-сервисы.</div>
+            </div>
           </div>
         </div>
       </div>
