@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="HONTI Analyzer — графовая модель SAP-ландшафта для анализа зависимостей, data lineage, impact analysis и подготовки миграции." />
+  <title>HONTI Analyzer — карта сложных SAP-ландшафтов</title>
+  <style>
+    :root{
+      --bg:#f6f6f3;
+      --text:#111214;
+      --muted:#6f747a;
+      --line:#d9dbdd;
+      --card:#ffffff;
+      --soft:#eceee9;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+    header{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter:blur(12px);
+      background:rgba(246,246,243,.86);
+      border-bottom:1px solid rgba(17,18,20,.08);
+    }
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-size:20px;font-weight:800;letter-spacing:.12em}
+    .navlinks{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+    .navlinks a:hover{color:var(--text)}
+    .hero{padding:112px 0 74px}
+    .eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+    h1{margin:0;max-width:1010px;font-size:clamp(50px,8.4vw,108px);line-height:.92;letter-spacing:-.058em;font-weight:760}
+    .lead{margin:30px 0 0;max-width:790px;font-size:clamp(19px,2vw,27px);line-height:1.35;color:#3f4449}
+    .hero-actions{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:999px;border:1px solid var(--text);font-size:14px;font-weight:650}
+    .btn.primary{background:var(--text);color:#fff}
+    .btn.secondary{background:transparent}
+    section{padding:90px 0;border-top:1px solid var(--line)}
+    .section-kicker{font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:30px}
+    .display-copy{max-width:980px;margin:0;font-size:clamp(34px,5vw,70px);line-height:1.02;letter-spacing:-.045em}
+    .subcopy{max-width:720px;margin:26px 0 0;color:var(--muted);font-size:18px}
+
+    .graph-shell{margin-top:52px;background:#111214;border-radius:30px;padding:26px;overflow:hidden;box-shadow:0 20px 60px rgba(17,18,20,.12)}
+    .graph-top{display:flex;justify-content:space-between;align-items:center;gap:18px;color:#d7dade;font-size:13px;margin-bottom:20px}
+    .graph-dots{display:flex;gap:7px}.graph-dots span{width:8px;height:8px;border-radius:50%;background:#5c6269;display:block}
+    .graph-stage{background:#17191c;border:1px solid #2b2f34;border-radius:22px;padding:18px;overflow:auto}
+    .graph-stage svg{width:100%;min-width:930px;height:auto;display:block}
+    .graph-caption{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:18px;color:#9ba1a7;font-size:12px}
+
+    .value-grid{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .value{min-height:250px;background:var(--card);border:1px solid #e5e6e7;border-radius:22px;padding:28px}
+    .value .num{font-size:12px;color:var(--muted);letter-spacing:.12em;margin-bottom:40px}
+    .value h3{margin:0 0 14px;font-size:26px;letter-spacing:-.025em}
+    .value p{margin:0;color:var(--muted);font-size:16px}
+
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:46px}
+    .step{padding:30px 28px 34px 0;border-right:1px solid var(--line)}
+    .step+.step{padding-left:28px}.step:last-child{border-right:0}
+    .step strong{display:block;font-size:30px;letter-spacing:-.03em;margin-bottom:12px}
+    .step p{margin:0;color:var(--muted);font-size:16px}
+
+    .cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-top:42px}
+    .cap{background:var(--bg);padding:30px;min-height:180px}
+    .cap-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+    .cap h3{margin:0;font-size:24px;letter-spacing:-.02em}
+    .tag{font-size:11px;text-transform:uppercase;letter-spacing:.1em;padding:7px 10px;border:1px solid #cfd2d4;border-radius:999px;color:var(--muted);white-space:nowrap}
+    .tag.live{background:#111214;color:#fff;border-color:#111214}
+    .cap p{margin:0;color:var(--muted);font-size:16px;max-width:500px}
+
+    .usecases{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
+    .use-list{border-top:1px solid var(--line)}
+    .use-item{padding:24px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:120px 1fr;gap:24px}
+    .use-item span{color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+    .use-item strong{font-size:21px;font-weight:600;letter-spacing:-.015em}
+
+    .cta{padding:112px 0}
+    .cta-box{background:#111214;color:#fff;border-radius:30px;padding:54px}
+    .cta-box .section-kicker{color:#989da3}
+    .cta-title{margin:0;max-width:850px;font-size:clamp(40px,6vw,80px);line-height:.98;letter-spacing:-.05em}
+    .cta-actions{margin-top:34px}.cta .btn{border-color:#fff}.cta .btn.primary{background:#fff;color:#111214}
+
+    footer{padding:28px 0 38px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+    @media(max-width:900px){
+      .navlinks{display:none}.value-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.step,.step+.step{padding:24px 0;border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}.cap-grid{grid-template-columns:1fr}.usecases{grid-template-columns:1fr;gap:34px}.hero{padding-top:82px}.cta-box{padding:34px}.graph-shell{padding:14px;border-radius:22px}
+    }
+    @media(max-width:620px){.wrap{width:min(calc(100% - 26px),var(--max))}section{padding:70px 0}.use-item{grid-template-columns:1fr;gap:8px}.hero{padding:72px 0 56px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="/">ХОНТИ</a>
+        <div class="navlinks">
+          <a href="#value">Возможности</a>
+          <a href="#how">Как работает</a>
+          <a href="#roadmap">Развитие</a>
+          <a href="#contact">Контакты</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="border-top:0">
+      <div class="wrap">
+        <div class="eyebrow">HONTI Analyzer · SAP landscape intelligence</div>
+        <h1>Сложная система — как единая карта.</h1>
+        <p class="lead">HONTI Analyzer превращает технические зависимости SAP-ландшафта в графовую модель: от источников данных и трансформаций до хранилищ, провайдеров и отчётности.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Обсудить пилот</a>
+          <a class="btn secondary" href="#graph">Посмотреть модель</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="graph">
+      <div class="wrap">
+        <div class="section-kicker">Единое представление</div>
+        <p class="display-copy">Из тысяч технических объектов — в понятную структуру связей.</p>
+        <p class="subcopy">Граф показывает, как данные проходят через слои системы и где находятся точки зависимости. Для публичной демонстрации ниже используется обезличенный пример, повторяющий структуру рабочего MVP.</p>
+
+        <div class="graph-shell">
+          <div class="graph-top"><span>Landscape dependency graph</span><div class="graph-dots"><span></span><span></span><span></span></div></div>
+          <div class="graph-stage">
+            <svg viewBox="0 0 1100 500" role="img" aria-label="Пример графа зависимостей SAP-ландшафта">
+              <defs>
+                <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#636a72"/></marker>
+                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#000" flood-opacity=".22"/></filter>
+              </defs>
+              <g fill="none" stroke="#4c535b" stroke-width="2" marker-end="url(#arrow)">
+                <path d="M175 250 C230 250 235 110 300 110"/>
+                <path d="M175 250 C230 250 235 250 300 250"/>
+                <path d="M175 250 C230 250 235 390 300 390"/>
+                <path d="M450 110 C505 110 510 170 560 170"/>
+                <path d="M450 250 C505 250 510 250 560 250"/>
+                <path d="M450 390 C505 390 510 330 560 330"/>
+                <path d="M710 170 C765 170 765 250 810 250"/>
+                <path d="M710 250 C765 250 765 250 810 250"/>
+                <path d="M710 330 C765 330 765 250 810 250"/>
+                <path d="M955 250 C995 250 1000 175 1030 175"/>
+                <path d="M955 250 C995 250 1000 325 1030 325"/>
+              </g>
+
+              <g filter="url(#shadow)">
+                <g transform="translate(35 207)"><rect width="140" height="86" rx="18" fill="#22262a" stroke="#42484f"/><text x="20" y="34" fill="#9ca2a8" font-size="12">SYSTEM</text><text x="20" y="59" fill="#fff" font-size="17" font-weight="600">SAP S/4HANA</text></g>
+                <g transform="translate(300 67)"><rect width="150" height="86" rx="18" fill="#22262a" stroke="#42484f"/><text x="20" y="33" fill="#9ca2a8" font-size="12">DATASOURCE</text><text x="20" y="59" fill="#fff" font-size="16" font-weight="600">Sales</text></g>
+                <g transform="translate(300 207)"><rect width="150" height="86" rx="18" fill="#22262a" stroke="#42484f"/><text x="20" y="33" fill="#9ca2a8" font-size="12">DATASOURCE</text><text x="20" y="59" fill="#fff" font-size="16" font-weight="600">Inventory</text></g>
+                <g transform="translate(300 347)"><rect width="150" height="86" rx="18" fill="#22262a" stroke="#42484f"/><text x="20" y="33" fill="#9ca2a8" font-size="12">DATASOURCE</text><text x="20" y="59" fill="#fff" font-size="16" font-weight="600">Purchasing</text></g>
+
+                <g transform="translate(560 127)"><rect width="150" height="86" rx="18" fill="#252b30" stroke="#4a525a"/><text x="20" y="33" fill="#9ca2a8" font-size="12">ADSO</text><text x="20" y="59" fill="#fff" font-size="16" font-weight="600">Sales Layer</text></g>
+                <g transform="translate(560 207)"><rect width="150" height="86" rx="18" fill="#252b30" stroke="#4a525a"/><text x="20" y="33" fill="#9ca2a8" font-size="12">ADSO</text><text x="20" y="59" fill="#fff" font-size="16" font-weight="600">Core Data</text></g>
+                <g transform="translate(560 287)"><rect width="150" height="86" rx="18" fill="#252b30" stroke="#4a525a"/><text x="20" y="33" fill="#9ca2a8" font-size="12">ADSO</text><text x="20" y="59" fill="#fff" font-size="16" font-weight="600">Purchasing</text></g>
+
+                <g transform="translate(810 207)"><rect width="145" height="86" rx="18" fill="#2c3136" stroke="#535a62"/><text x="20" y="33" fill="#9ca2a8" font-size="12">COMPOSITE</text><text x="20" y="59" fill="#fff" font-size="16" font-weight="600">Enterprise View</text></g>
+
+                <g transform="translate(1030 137)"><rect width="70" height="76" rx="18" fill="#343a40" stroke="#5e6670"/><text x="12" y="29" fill="#9ca2a8" font-size="10">QUERY</text><text x="12" y="52" fill="#fff" font-size="13" font-weight="600">KPI</text></g>
+                <g transform="translate(1030 287)"><rect width="70" height="76" rx="18" fill="#343a40" stroke="#5e6670"/><text x="12" y="29" fill="#9ca2a8" font-size="10">QUERY</text><text x="12" y="52" fill="#fff" font-size="13" font-weight="600">Report</text></g>
+              </g>
+            </svg>
+          </div>
+          <div class="graph-caption"><span>System → DataSource → ADSO → CompositeProvider → Query</span><span>Обезличенная демонстрационная модель</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="value">
+      <div class="wrap">
+        <div class="section-kicker">Польза</div>
+        <p class="display-copy">Не просто увидеть связи. Понять, что они значат.</p>
+        <div class="value-grid">
+          <article class="value"><div class="num">01</div><h3>Data Lineage</h3><p>Проследить путь данных от исходной системы до аналитического запроса и быстро ответить на вопрос: «откуда здесь это значение?»</p></article>
+          <article class="value"><div class="num">02</div><h3>Dependency Analysis</h3><p>Увидеть взаимосвязи между объектами, слои архитектуры и наиболее насыщенные участки корпоративного ландшафта.</p></article>
+          <article class="value"><div class="num">03</div><h3>Impact Analysis</h3><p>Оценивать потенциальное влияние изменений через upstream- и downstream-цепочки до того, как изменение попадёт в продуктив.</p></article>
+          <article class="value"><div class="num">04</div><h3>Landscape Discovery</h3><p>Получить техническую карту системы вместо разрозненных схем, Excel-файлов и знаний отдельных специалистов.</p></article>
+          <article class="value"><div class="num">05</div><h3>Migration Assessment</h3><p>Использовать реальную структуру зависимостей как основу для оценки сложности переноса и формирования миграционных волн.</p></article>
+          <article class="value"><div class="num">06</div><h3>Architecture Insight</h3><p>Быстро находить критические цепочки, центральные объекты и места, где изменение одной части системы затрагивает многие другие.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-kicker">Как работает</div>
+        <p class="display-copy">Collect. Connect. Analyze.</p>
+        <div class="steps">
+          <div class="step"><strong>Collect</strong><p>Получаем технические метаданные и зависимости SAP/BW/HANA. В MVP сбор отделён от пользовательского интерфейса и выполняется как отдельный этап.</p></div>
+          <div class="step"><strong>Connect</strong><p>Нормализуем объекты и связи в единую графовую модель: объект становится узлом, зависимость — ребром графа.</p></div>
+          <div class="step"><strong>Analyze</strong><p>Используем граф для навигации, lineage, оценки влияния изменений и дальнейшего миграционного анализа.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <div class="wrap">
+        <div class="section-kicker">MVP и развитие</div>
+        <p class="display-copy">Работающее ядро уже есть. Следующий шаг — автоматизация анализа.</p>
+        <div class="cap-grid">
+          <article class="cap"><div class="cap-row"><h3>Dependency Graph</h3><span class="tag live">MVP</span></div><p>Интерактивное представление объектов и зависимостей с фильтрацией, выбором узлов и сфокусированными представлениями.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Graph / Table View</h3><span class="tag live">MVP</span></div><p>Переключение между визуальным графом и табличным представлением связей для технического анализа.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Automated Discovery</h3><span class="tag">Roadmap</span></div><p>Автоматизированный запуск коллекторов метаданных и регулярное обновление модели без ручного запуска extraction-скриптов.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Landscape Snapshots</h3><span class="tag">Roadmap</span></div><p>Сохранение состояний ландшафта и сравнение изменений: новые, удалённые и изменившиеся объекты и связи.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Impact & Criticality</h3><span class="tag">Roadmap</span></div><p>Upstream/downstream traversal, оценка масштаба воздействия и выявление наиболее критичных компонентов системы.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Migration Scoring</h3><span class="tag">Roadmap</span></div><p>Оценка сложности переноса, SAP-specific зависимостей и формирование последовательности миграционных волн.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap usecases">
+        <div>
+          <div class="section-kicker">Когда полезен</div>
+          <p class="display-copy" style="font-size:clamp(34px,4.4vw,62px)">Когда система стала больше, чем её документация.</p>
+        </div>
+        <div class="use-list">
+          <div class="use-item"><span>Изменения</span><strong>Понять последствия до доработки SAP-объекта.</strong></div>
+          <div class="use-item"><span>Поддержка</span><strong>Быстрее разбираться в незнакомых цепочках и зависимостях.</strong></div>
+          <div class="use-item"><span>Архитектура</span><strong>Получить реальную карту системы вместо схем «по памяти».</strong></div>
+          <div class="use-item"><span>Миграция</span><strong>Разделить ландшафт на осмысленные связанные контуры переноса.</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="wrap">
+        <div class="cta-box">
+          <div class="section-kicker">HONTI Analyzer</div>
+          <p class="cta-title">От технических объектов — к пониманию системы.</p>
+          <div class="cta-actions"><a class="btn primary" href="mailto:info@honti-it.ru?subject=HONTI%20Analyzer">Обсудить HONTI Analyzer</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row"><span>© 2026 ХОНТИ</span><span><a href="/">honti-it.ru</a></span></div>
+  </footer>
+</body>
+</html>
