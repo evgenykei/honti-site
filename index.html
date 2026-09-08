@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ХОНТИ — enterprise IT expertise. SAP, корпоративные системы, данные и разработка." />
+  <title>ХОНТИ — Enterprise IT Expertise</title>
+  <style>
+    :root{
+      --bg:#f6f6f3;
+      --text:#111214;
+      --muted:#6f747a;
+      --line:#d9dbdd;
+      --card:#ffffff;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter:blur(12px);
+      background:rgba(246,246,243,.84);
+      border-bottom:1px solid rgba(17,18,20,.08);
+    }
+    nav{
+      height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{
+      font-size:20px;
+      font-weight:800;
+      letter-spacing:.12em;
+    }
+    .navlinks{
+      display:flex;
+      gap:28px;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .navlinks a:hover{color:var(--text)}
+    .hero{
+      min-height:72vh;
+      display:flex;
+      align-items:center;
+      padding:80px 0 60px;
+    }
+    .eyebrow{
+      font-size:13px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:18px;
+    }
+    h1{
+      margin:0;
+      max-width:900px;
+      font-size:clamp(46px,8vw,104px);
+      line-height:.93;
+      letter-spacing:-.055em;
+      font-weight:760;
+    }
+    .lead{
+      margin-top:30px;
+      max-width:720px;
+      font-size:clamp(18px,2vw,26px);
+      line-height:1.35;
+      color:#3f4449;
+    }
+    .hero-actions{
+      margin-top:34px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:0 18px;
+      border-radius:999px;
+      border:1px solid var(--text);
+      font-size:14px;
+      font-weight:650;
+    }
+    .btn.primary{background:var(--text);color:white}
+    .btn.secondary{background:transparent}
+    section{
+      padding:88px 0;
+      border-top:1px solid var(--line);
+    }
+    .section-kicker{
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      color:var(--muted);
+      margin-bottom:32px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid #e5e6e7;
+      border-radius:22px;
+      padding:28px;
+      min-height:220px;
+    }
+    .card h3{
+      margin:0 0 18px;
+      font-size:24px;
+      letter-spacing:-.02em;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+    }
+    .big-copy{
+      max-width:940px;
+      font-size:clamp(30px,4.6vw,62px);
+      line-height:1.06;
+      letter-spacing:-.04em;
+      margin:0;
+    }
+    .contact{
+      display:grid;
+      grid-template-columns:1.4fr .6fr;
+      gap:32px;
+      align-items:end;
+    }
+    .contact-mail{
+      display:inline-block;
+      margin-top:28px;
+      font-size:clamp(28px,4vw,56px);
+      font-weight:700;
+      letter-spacing:-.035em;
+      border-bottom:2px solid currentColor;
+    }
+    .meta{
+      color:var(--muted);
+      font-size:14px;
+      text-align:right;
+    }
+    footer{
+      padding:28px 0 38px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer-row{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    @media(max-width:800px){
+      .navlinks{display:none}
+      .hero{min-height:auto;padding:72px 0}
+      .grid{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      .meta{text-align:left}
+      section{padding:68px 0}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#">ХОНТИ</a>
+        <div class="navlinks">
+          <a href="#expertise">Экспертиза</a>
+          <a href="#about">О компании</a>
+          <a href="#contact">Контакты</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="border-top:0">
+      <div class="wrap">
+        <div class="eyebrow">Enterprise IT expertise</div>
+        <h1>Люди и технологии для сложных систем.</h1>
+        <p class="lead">
+          ХОНТИ помогает компаниям усиливать команды и развивать корпоративные IT-системы:
+          от SAP и аналитики до разработки и технологического консалтинга.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Связаться</a>
+          <a class="btn secondary" href="#expertise">Экспертиза</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="wrap">
+        <div class="section-kicker">Экспертиза</div>
+        <div class="grid">
+          <article class="card">
+            <h3>SAP & Enterprise Systems</h3>
+            <p>Сопровождение, развитие и экспертная поддержка критичных корпоративных систем.</p>
+          </article>
+          <article class="card">
+            <h3>Data & Analytics</h3>
+            <p>Корпоративные хранилища, аналитические платформы и инженерия данных.</p>
+          </article>
+          <article class="card">
+            <h3>Development</h3>
+            <p>Усиление проектных и продуктовых команд сильными инженерами и консультантами.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-kicker">Подход</div>
+        <p class="big-copy">
+          Минимум бюрократии и лишней структуры. Максимум сильной экспертизы, ответственности и понятного результата.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap contact">
+        <div>
+          <div class="section-kicker">Контакты</div>
+          <p class="big-copy" style="max-width:720px">Обсудим задачу.</p>
+          <a class="contact-mail" href="mailto:info@honti-it.ru">info@honti-it.ru</a>
+        </div>
+        <div class="meta">
+          ООО «ХОНТИ»<br/>
+          Москва, Россия
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© 2026 ХОНТИ</span>
+      <span>honti-it.ru</span>
+    </div>
+  </footer>
+</body>
+</html>
