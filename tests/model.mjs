@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {compare,reach,legacy,visible,validate} from '../analyzer/demo/model.js';
+const nodes=['a','b','c','d'].map(id=>({id,label:id,type:'x'}));
+const edges=[['a','b'],['b','c'],['b','d'],['c','b'],['d','d']].map(([source,target],i)=>({id:'e'+i,source,target}));
+assert.deepEqual([...reach(nodes,edges,'a','down')].sort(),['a','b','c','d']);
+assert.deepEqual([...reach(nodes,edges,'c','up')].sort(),['a','b','c']);
+const before={nodes,edges,complete:true,scope:'x'},after={...before,nodes:nodes.slice(0,3),edges:edges.filter(e=>e.source!=='d'&&e.target!=='d')};
+assert.equal(compare(before,after).nodes.get('d'),'removed');assert.equal(compare({...before,complete:false},after).comparable,false);
+assert.equal(visible(before,{types:new Set()}).nodes.length,0);
+const imp=legacy([{key:'x',name:'X'}],[{key:'a',group:'x ',title:'A'}],[{from:'a',to:'a'},{from:'a',to:'a'}]);assert.equal(imp.project.snapshots[0].edges.length,1);assert.equal(imp.warnings.length,2);
+assert.throws(()=>validate({schemaVersion:1,snapshots:[{id:'x',capturedAt:'bad',nodes:[],edges:[]}]}));
+console.log('Domain checks passed: branches, cycles, self-loop, partial snapshots, filters, legacy adapter.');
