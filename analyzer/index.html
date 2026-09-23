@@ -154,137 +154,16 @@
       <div class="wrap">
         <div class="section-kicker">Работающий прототип</div>
         <p class="display-copy">Когда объектов тысячи, важно видеть не объект. Важно видеть, как всё связано.</p>
-        <p class="subcopy">Интерфейс ниже повторяет реальную логику работающего MVP. Технические имена обезличены, но структура графа, типы объектов, фильтрация и способ навигации сохранены.</p>
+        <p class="subcopy">Исследуйте интерактивный граф, выберите объект и проследите его зависимости. История показывает вымышленные этапы развития демонстрационного ландшафта. Подключение к SAP не требуется.</p>
 
-        <div class="mvp-shell" aria-label="Интерфейс HONTI Analyzer MVP">
-          <div class="mvp-tabs">
-            <div class="mvp-tab active">Граф</div>
-            <div class="mvp-tab">Таблица</div>
-          </div>
-          <div class="mvp-toolbar">
-            <div class="tool"><span class="tool-icon">☷</span></div>
-            <div class="tool"><span class="tool-icon">▽</span><span>Настроить фильтр</span></div>
-            <div class="tool"><span class="tool-icon">▽×</span><span>Сбросить фильтр</span></div>
-            <div class="tool-select"><span>РАБОЧАЯ ОБЛАСТЬ</span><span>⌄</span></div>
-            <div class="tool-spacer"></div>
-            <div class="tool-search"><span>Поиск</span><span>⌕</span></div>
-            <div class="tool"><span>▦</span></div>
-            <div class="tool"><span>⊕</span><span>25%</span><span>⊖</span></div>
-            <div class="tool"><span>⛶</span></div>
-          </div>
-
-          <div class="mvp-canvas">
-            <svg viewBox="0 0 1500 670" role="img" aria-label="Обезличенный граф зависимостей SAP BW, BW/4HANA и HANA">
-              <defs>
-                <marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0 0 L0 6 L7 3 z" fill="#afbac3"/></marker>
-                <filter id="s" x="-10%" y="-20%" width="120%" height="140%"><feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000" flood-opacity=".25"/></filter>
-              </defs>
-
-              <!-- relationships -->
-              <g fill="none" stroke="#afbac3" stroke-width="1.15" opacity=".92" marker-end="url(#a)">
-                <path d="M88 250 H165 V120 H265"/><path d="M88 250 H165 V205 H265"/><path d="M88 250 H165 V292 H265"/><path d="M88 250 H165 V380 H265"/>
-                <path d="M382 120 H470"/><path d="M382 205 H470"/><path d="M382 292 H470"/><path d="M382 380 H470"/>
-                <path d="M590 120 H665"/><path d="M590 205 H665"/><path d="M590 292 H665"/><path d="M590 380 H665"/>
-                <path d="M790 120 H890"/><path d="M790 205 H890"/><path d="M790 292 H890"/><path d="M790 380 H890"/>
-                <path d="M1035 120 H1110"/><path d="M1035 205 H1110"/><path d="M1035 292 H1110"/><path d="M1035 380 H1110"/>
-                <path d="M1235 120 H1310"/><path d="M1235 205 H1310"/><path d="M1235 292 H1310"/><path d="M1235 380 H1310"/>
-                <path d="M590 120 V72 H890"/><path d="M790 292 V455 H1110"/><path d="M382 380 V520 H665"/><path d="M790 380 V520 H890"/><path d="M1035 520 H1110"/><path d="M1235 520 H1310"/>
-                <path d="M1035 205 V163 H1110"/><path d="M1035 292 V335 H1110"/>
-              </g>
-
-              <!-- source system -->
-              <g filter="url(#s)">
-                <rect x="18" y="220" width="70" height="61" rx="4" fill="#ffc86b" stroke="#e5a540"/>
-                <text x="27" y="239" fill="#23303a" font-size="10" font-weight="700">SAP S/4</text>
-                <line x1="24" y1="246" x2="81" y2="246" stroke="#cc9441"/>
-                <text x="26" y="259" fill="#3b4650" font-size="7">SYSTEM</text><text x="65" y="259" fill="#3b4650" font-size="7">PRD</text>
-                <text x="26" y="270" fill="#3b4650" font-size="7">CLIENT</text><text x="65" y="270" fill="#3b4650" font-size="7">***</text>
-              </g>
-
-              <!-- datasource nodes -->
-              <g font-family="Arial,sans-serif" filter="url(#s)">
-                <g><circle cx="323" cy="120" r="22" fill="#26323c" stroke="#86d497" stroke-width="4"/><text x="313" y="126" fill="#d9edf6" font-size="17">⌘</text><text x="270" y="151" fill="#e9eef2" font-size="10">Источник продаж</text></g>
-                <g><circle cx="323" cy="205" r="22" fill="#26323c" stroke="#86d497" stroke-width="4"/><text x="313" y="211" fill="#d9edf6" font-size="17">⌘</text><circle cx="344" cy="183" r="4" fill="#ff2f2f"/><text x="260" y="236" fill="#e9eef2" font-size="10">Движения материала</text></g>
-                <g><circle cx="323" cy="292" r="22" fill="#26323c" stroke="#86d497" stroke-width="4"/><text x="313" y="298" fill="#d9edf6" font-size="17">⌘</text><text x="267" y="323" fill="#e9eef2" font-size="10">Документы закупки</text></g>
-                <g><circle cx="323" cy="380" r="22" fill="#26323c" stroke="#86d497" stroke-width="4"/><text x="313" y="386" fill="#d9edf6" font-size="17">⌘</text><text x="273" y="411" fill="#e9eef2" font-size="10">Поставки</text></g>
-              </g>
-
-              <!-- staging ADSO -->
-              <g font-family="Arial,sans-serif" font-size="10" filter="url(#s)">
-                <g><rect x="470" y="103" width="120" height="34" rx="4" fill="#7fc3f0" stroke="#5a9bc8"/><text x="478" y="124" fill="#193041">▣  Staging: Sales</text></g>
-                <g><rect x="470" y="188" width="120" height="34" rx="4" fill="#7fc3f0" stroke="#5a9bc8"/><text x="478" y="209" fill="#193041">▣  Staging: Material</text><circle cx="584" cy="191" r="4" fill="#ff2f2f"/></g>
-                <g><rect x="470" y="275" width="120" height="34" rx="4" fill="#7fc3f0" stroke="#5a9bc8"/><text x="478" y="296" fill="#193041">▣  Staging: Purchase</text></g>
-                <g><rect x="470" y="363" width="120" height="34" rx="4" fill="#7fc3f0" stroke="#5a9bc8"/><text x="478" y="384" fill="#193041">▣  Staging: Delivery</text></g>
-              </g>
-
-              <!-- transformations -->
-              <g filter="url(#s)">
-                <g><circle cx="725" cy="120" r="21" fill="#26323c" stroke="#70808d"/><text x="716" y="126" fill="#fff" font-size="17">▷+</text><text x="690" y="151" fill="#e9eef2" font-size="10">Transform</text></g>
-                <g><circle cx="725" cy="205" r="21" fill="#26323c" stroke="#70808d"/><text x="716" y="211" fill="#fff" font-size="17">▷+</text><circle cx="746" cy="183" r="4" fill="#ff2f2f"/><text x="690" y="236" fill="#e9eef2" font-size="10">Transform</text></g>
-                <g><circle cx="725" cy="292" r="21" fill="#26323c" stroke="#70808d"/><text x="716" y="298" fill="#fff" font-size="17">▷+</text><text x="690" y="323" fill="#e9eef2" font-size="10">Transform</text></g>
-                <g><circle cx="725" cy="380" r="21" fill="#26323c" stroke="#70808d"/><text x="716" y="386" fill="#fff" font-size="17">▷+</text><text x="690" y="411" fill="#e9eef2" font-size="10">Transform</text></g>
-              </g>
-
-              <!-- harmonised ADSO -->
-              <g font-family="Arial,sans-serif" font-size="10" filter="url(#s)">
-                <g><rect x="890" y="103" width="145" height="34" rx="4" fill="#ff7b86" stroke="#de5d69"/><text x="898" y="124" fill="#4c262b">▣  Data Layer 1: Sales</text></g>
-                <g><rect x="890" y="188" width="145" height="34" rx="4" fill="#ff7b86" stroke="#de5d69"/><text x="898" y="209" fill="#4c262b">▣  Data Layer 1: Stock</text></g>
-                <g><rect x="890" y="275" width="145" height="34" rx="4" fill="#ff7b86" stroke="#de5d69"/><text x="898" y="296" fill="#4c262b">▣  Data Layer 1: Purchase</text></g>
-                <g><rect x="890" y="363" width="145" height="34" rx="4" fill="#ff7b86" stroke="#de5d69"/><text x="898" y="384" fill="#4c262b">▣  Data Layer 1: Delivery</text></g>
-                <g><rect x="890" y="503" width="145" height="34" rx="4" fill="#7fc3f0" stroke="#5a9bc8"/><text x="898" y="524" fill="#193041">▣  Calculation View</text></g>
-              </g>
-
-              <!-- second layer -->
-              <g font-family="Arial,sans-serif" font-size="10" filter="url(#s)">
-                <g><rect x="1110" y="103" width="125" height="34" rx="4" fill="#ff7b86" stroke="#de5d69"/><text x="1118" y="124" fill="#4c262b">▣  Data Layer 2</text></g>
-                <g><rect x="1110" y="188" width="125" height="34" rx="4" fill="#ff7b86" stroke="#de5d69"/><text x="1118" y="209" fill="#4c262b">▣  Data Layer 2</text></g>
-                <g><rect x="1110" y="275" width="125" height="34" rx="4" fill="#ff7b86" stroke="#de5d69"/><text x="1118" y="296" fill="#4c262b">▣  Data Layer 2</text></g>
-                <g><rect x="1110" y="363" width="125" height="34" rx="4" fill="#ff7b86" stroke="#de5d69"/><text x="1118" y="384" fill="#4c262b">▣  Data Layer 2</text></g>
-                <g><rect x="1110" y="503" width="125" height="34" rx="4" fill="#e9edf0" stroke="#bcc7cf"/><text x="1118" y="524" fill="#35434e">▦  Table / View</text></g>
-              </g>
-
-              <!-- providers / query -->
-              <g filter="url(#s)">
-                <g><circle cx="1355" cy="120" r="22" fill="#26323c" stroke="#73818b"/><text x="1346" y="126" fill="#dce6eb" font-size="17">⌘</text><text x="1302" y="151" fill="#e9eef2" font-size="10">Sales Analytics</text></g>
-                <g><circle cx="1355" cy="205" r="22" fill="#26323c" stroke="#73818b"/><text x="1346" y="211" fill="#dce6eb" font-size="17">⌘</text><text x="1296" y="236" fill="#e9eef2" font-size="10">Stock & Movement</text></g>
-                <g><circle cx="1355" cy="292" r="22" fill="#26323c" stroke="#73818b"/><text x="1346" y="298" fill="#dce6eb" font-size="17">⌘</text><text x="1300" y="323" fill="#e9eef2" font-size="10">Procurement</text></g>
-                <g><circle cx="1355" cy="380" r="22" fill="#26323c" stroke="#73818b"/><text x="1346" y="386" fill="#dce6eb" font-size="17">⌘</text><text x="1313" y="411" fill="#e9eef2" font-size="10">Logistics</text></g>
-                <g><rect x="1310" y="503" width="94" height="34" rx="4" fill="#8fd49b" stroke="#63ac70"/><text x="1320" y="524" fill="#193b24" font-size="10">Query / Report</text></g>
-              </g>
-
-              <!-- extra heterogeneous objects -->
-              <g filter="url(#s)" font-size="9">
-                <rect x="470" y="55" width="105" height="25" rx="3" fill="#ffc86b"/><text x="479" y="72" fill="#3c3423">Table Function</text>
-                <rect x="665" y="55" width="112" height="25" rx="3" fill="#8fd49b"/><text x="674" y="72" fill="#203a26">InfoObject</text>
-                <rect x="890" y="55" width="112" height="25" rx="3" fill="#e9edf0"/><text x="899" y="72" fill="#38444d">HANA Procedure</text>
-                <rect x="1110" y="146" width="125" height="25" rx="3" fill="#7fc3f0"/><text x="1119" y="163" fill="#193041">Open ODS View</text>
-                <rect x="1110" y="318" width="125" height="25" rx="3" fill="#e9edf0"/><text x="1119" y="335" fill="#38444d">Virtual Table</text>
-              </g>
-
-              <!-- legend -->
-              <g transform="translate(1236 455)">
-                <rect x="0" y="0" width="245" height="198" fill="#172027" opacity=".96"/>
-                <text x="14" y="24" fill="#f0f3f5" font-size="14" font-weight="700">Типы объектов</text>
-                <text x="14" y="48" fill="#ef941e" font-size="11">▷  ИСХОДНАЯ СИСТЕМА</text>
-                <text x="14" y="67" fill="#ef941e" font-size="11">▷  ИСТОЧНИК</text>
-                <text x="14" y="86" fill="#ff9a22" font-size="11">▤  УРОВЕНЬ АГРЕГАЦИИ</text>
-                <text x="14" y="105" fill="#7fc3f0" font-size="11">▦  ЗАПРОС</text>
-                <text x="14" y="124" fill="#ff9a22" font-size="11">⌘  КОМПОЗИТНЫЙ ПРОВАЙДЕР</text>
-                <text x="14" y="143" fill="#8fd49b" font-size="11">▤  ИНФО-ОБЪЕКТ</text>
-                <text x="14" y="162" fill="#e9edf0" font-size="11">▦  ТАБЛИЦА / VIEW</text>
-                <text x="14" y="181" fill="#7fc3f0" font-size="11">▦  OPEN ODS VIEW</text>
-              </g>
-            </svg>
-          </div>
-          <div class="mvp-caption">
-            <strong>Интерфейс рабочего MVP · публичная обезличенная реконструкция</strong>
-            <span>Граф формируется из технических метаданных системы, а не рисуется вручную.</span>
-          </div>
+        <div class="mvp-shell" style="background:#f6f6f3">
+          <iframe src="demo/" title="Интерактивное демо HONTI Analyzer" loading="lazy" style="display:block;width:100%;height:1100px;border:0"></iframe>
         </div>
+        <p class="subcopy"><a href="demo/" target="_blank" rel="noopener">Открыть приложение в отдельном окне ↗</a></p>
 
         <div class="statement">
           <p>От исходной системы до конечной аналитики — одна цепочка, которую можно исследовать.</p>
-          <aside>В рабочем MVP уже есть фильтрация по типам объектов и выбранным узлам, режимы «Граф» и «Таблица», поиск, масштабирование и навигация по связанным объектам.</aside>
+          <aside>В демо доступны поиск, фильтры, граф и таблица, свойства объектов, цепочки зависимостей и история изменений. Можно загрузить собственный набор JSON для локального просмотра.</aside>
         </div>
       </div>
     </section>
@@ -337,8 +216,8 @@
           <article class="cap"><div class="cap-row"><h3>Dependency Graph</h3><span class="tag live">MVP</span></div><p>Интерактивное графовое и табличное представление связей, фильтрация и исследование выбранных объектов.</p></article>
           <article class="cap"><div class="cap-row"><h3>Metadata Collection</h3><span class="tag live">MVP</span></div><p>Набор правил извлечения зависимостей из технических метаданных с сохранением результата в подготовленную модель.</p></article>
           <article class="cap"><div class="cap-row"><h3>Automated Discovery</h3><span class="tag">Roadmap</span></div><p>Автоматический запуск collector-правил, версии сканирования и повторяемое построение карты ландшафта.</p></article>
-          <article class="cap"><div class="cap-row"><h3>Landscape Snapshots</h3><span class="tag">Roadmap</span></div><p>Снимки состояния системы и сравнение того, какие объекты и зависимости появились, исчезли или изменились.</p></article>
-          <article class="cap"><div class="cap-row"><h3>Impact Analysis</h3><span class="tag">Roadmap</span></div><p>Автоматический upstream/downstream обход графа, пути зависимостей и оценка области воздействия изменений.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Landscape Snapshots</h3><span class="tag live">Демо 0.1</span></div><p>В браузерном демо — сравнение снимков и воспроизведение вымышленной истории. Автоматический сбор реальных снимков — следующий этап.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Impact Analysis</h3><span class="tag">Roadmap</span></div><p>Обход upstream/downstream доступен в демо. Оценка критичности и бизнес-последствий изменений — в планах.</p></article>
           <article class="cap"><div class="cap-row"><h3>Migration Assessment</h3><span class="tag">Roadmap</span></div><p>Оценка сложности переноса, критичности зависимостей, target mapping и подготовка миграционной последовательности.</p></article>
         </div>
       </div>
