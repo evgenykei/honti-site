@@ -58,21 +58,8 @@
     .subcopy{max-width:760px;margin:26px 0 0;color:var(--muted);font-size:18px}
     .quiet{color:var(--muted)}
 
-    /* MVP window — deliberately anonymised, based on the working prototype UI */
+    /* Embedded interactive prototype */
     .mvp-shell{margin-top:52px;background:var(--dark2);border:1px solid #3a4650;border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(17,18,20,.16)}
-    .mvp-tabs{height:50px;background:#26323e;border-bottom:1px solid #40505e;display:flex;align-items:flex-end;padding-left:18px;gap:26px;color:#d9e1e7;font-size:14px}
-    .mvp-tab{height:50px;display:flex;align-items:center;position:relative}
-    .mvp-tab.active{color:#8ed1ff}
-    .mvp-tab.active:after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;border-radius:3px 3px 0 0;background:#79c9ff}
-    .mvp-toolbar{height:56px;background:#19232b;border-bottom:1px solid #394752;display:flex;align-items:center;gap:18px;padding:0 18px;color:#80c9fb;font-size:13px;white-space:nowrap;overflow:hidden}
-    .tool{display:flex;align-items:center;gap:7px}.tool-icon{font-size:17px}
-    .tool-select{min-width:190px;height:32px;border:1px solid #667684;border-radius:3px;color:#dce4ea;display:flex;align-items:center;padding:0 10px;justify-content:space-between;background:#24313b}
-    .tool-spacer{flex:1}.tool-search{width:220px;height:32px;border:1px solid #657684;border-radius:3px;color:#a8b3bb;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-style:italic;background:#202b34}
-    .mvp-canvas{overflow:auto;background:var(--dark);}
-    .mvp-canvas svg{display:block;width:100%;min-width:1160px;height:auto}
-    .mvp-caption{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;padding:17px 20px;background:#172028;border-top:1px solid #394651;color:#95a1aa;font-size:12px}
-    .mvp-caption strong{color:#d7e0e6;font-weight:600}
-
     .statement{margin-top:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:end}
     .statement p{margin:0;font-size:clamp(25px,3.3vw,46px);line-height:1.08;letter-spacing:-.035em}
     .statement aside{color:var(--muted);font-size:16px;max-width:380px}
@@ -113,12 +100,11 @@
 
     footer{padding:28px 0 38px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
     .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .footer-legal{flex-basis:100%;display:flex;flex-wrap:wrap;gap:6px 20px}
 
     @media(max-width:900px){
-      .navlinks{display:none}.value-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.step,.step+.step{padding:24px 0;border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}.cap-grid{grid-template-columns:1fr}.split,.statement{grid-template-columns:1fr;gap:34px}.hero{padding-top:82px}.cta-box{padding:34px}.mvp-shell{border-radius:18px}.tool{display:none}.tool-select{display:flex}.tool-search{display:none}
+      .navlinks{display:none}.value-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.step,.step+.step{padding:24px 0;border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}.cap-grid{grid-template-columns:1fr}.split,.statement{grid-template-columns:1fr;gap:34px}.hero{padding-top:82px}.cta-box{padding:34px}.mvp-shell{border-radius:18px}
     }
-    @media(max-width:620px){.wrap{width:min(calc(100% - 26px),var(--max))}section{padding:70px 0}.hero{padding:72px 0 56px}.feature{grid-template-columns:1fr;gap:7px}.feature p{grid-column:1}.mvp-caption{display:block}.mvp-caption span{display:block;margin-top:5px}}
+    @media(max-width:620px){.wrap{width:min(calc(100% - 26px),var(--max))}section{padding:70px 0}.hero{padding:72px 0 56px}.feature{grid-template-columns:1fr;gap:7px}.feature p{grid-column:1}}
   </style>
 </head>
 <body>
@@ -127,7 +113,7 @@
       <nav>
         <a class="brand" href="/">ХОНТИ</a>
         <div class="navlinks">
-          <a href="#mvp">MVP</a>
+          <a href="#mvp">Демо</a>
           <a href="#value">Возможности</a>
           <a href="#how">Как работает</a>
           <a href="#roadmap">Развитие</a>
@@ -142,10 +128,10 @@
       <div class="wrap">
         <div class="eyebrow">HONTI Analyzer · SAP landscape intelligence</div>
         <h1>Понимать сложные SAP-ландшафты целиком.</h1>
-        <p class="lead">HONTI Analyzer превращает технические зависимости корпоративной SAP-системы в единую графовую модель — от исходных систем и источников данных до хранилищ, преобразований, провайдеров и аналитики.</p>
+        <p class="lead">Прототип HONTI Analyzer показывает зависимости объектов SAP-ландшафта в интерактивном графе — от исходных систем и источников данных до хранилищ, преобразований, провайдеров и аналитики.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#contact">Обсудить пилот</a>
-          <a class="btn secondary" href="#mvp">Посмотреть MVP</a>
+          <a class="btn secondary" href="#mvp">Посмотреть демо</a>
         </div>
       </div>
     </section>
@@ -157,7 +143,7 @@
         <p class="subcopy">Исследуйте интерактивный граф, выберите объект и проследите его зависимости. История показывает вымышленные этапы развития демонстрационного ландшафта. Подключение к SAP не требуется.</p>
 
         <div class="mvp-shell" style="background:#f6f6f3">
-          <iframe src="demo/" title="Интерактивное демо HONTI Analyzer" loading="lazy" style="display:block;width:100%;height:1100px;border:0"></iframe>
+          <iframe id="analyzer-demo" src="demo/" title="Интерактивное демо HONTI Analyzer" loading="lazy" style="display:block;width:100%;height:1100px;border:0"></iframe>
         </div>
         <p class="subcopy"><a href="demo/" target="_blank" rel="noopener">Открыть приложение в отдельном окне ↗</a></p>
 
@@ -200,7 +186,7 @@
         <div class="section-kicker">Как работает</div>
         <p class="display-copy">Collect. Connect. Analyze.</p>
         <div class="steps">
-          <div class="step"><strong>Collect</strong><p>Собираем технические метаданные SAP BW, BW/4HANA, HANA и связанных компонентов. В текущем MVP извлечение выполняется подготовленными SQL-правилами.</p></div>
+          <div class="step"><strong>Collect</strong><p>В демо используем вымышленные данные; можно загрузить собственные JSON-файлы. Подключение источника SAP — отдельный этап.</p></div>
           <div class="step"><strong>Connect</strong><p>Нормализуем объекты и зависимости в граф: объект становится узлом, техническая зависимость — связью между узлами.</p></div>
           <div class="step"><strong>Analyze</strong><p>Исследуем цепочки, фильтруем ландшафт и используем граф как основу для анализа изменений, архитектуры и миграции.</p></div>
         </div>
@@ -210,14 +196,14 @@
 
     <section id="roadmap">
       <div class="wrap">
-        <div class="section-kicker">MVP и развитие</div>
-        <p class="display-copy">Работающее ядро уже есть. Следующий шаг — автоматизировать анализ.</p>
+        <div class="section-kicker">Прототип и развитие</div>
+        <p class="display-copy">Исследуйте связи уже сейчас. Следующий шаг — подключить реальные данные.</p>
         <div class="cap-grid">
-          <article class="cap"><div class="cap-row"><h3>Dependency Graph</h3><span class="tag live">MVP</span></div><p>Интерактивное графовое и табличное представление связей, фильтрация и исследование выбранных объектов.</p></article>
-          <article class="cap"><div class="cap-row"><h3>Metadata Collection</h3><span class="tag live">MVP</span></div><p>Набор правил извлечения зависимостей из технических метаданных с сохранением результата в подготовленную модель.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Dependency Graph</h3><span class="tag live">Демо 0.1</span></div><p>Интерактивное графовое и табличное представление связей, фильтрация и исследование выбранных объектов.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Metadata Collection</h3><span class="tag">Следующий этап</span></div><p>Подключение к техническим метаданным SAP и сохранение нормализованной модели для повторного анализа.</p></article>
           <article class="cap"><div class="cap-row"><h3>Automated Discovery</h3><span class="tag">Roadmap</span></div><p>Автоматический запуск collector-правил, версии сканирования и повторяемое построение карты ландшафта.</p></article>
           <article class="cap"><div class="cap-row"><h3>Landscape Snapshots</h3><span class="tag live">Демо 0.1</span></div><p>В браузерном демо — сравнение снимков и воспроизведение вымышленной истории. Автоматический сбор реальных снимков — следующий этап.</p></article>
-          <article class="cap"><div class="cap-row"><h3>Impact Analysis</h3><span class="tag">Roadmap</span></div><p>Обход upstream/downstream доступен в демо. Оценка критичности и бизнес-последствий изменений — в планах.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Impact Analysis</h3><span class="tag live">Демо 0.1</span></div><p>Обход upstream/downstream доступен в демо. Оценка критичности и бизнес-последствий изменений — в планах.</p></article>
           <article class="cap"><div class="cap-row"><h3>Migration Assessment</h3><span class="tag">Roadmap</span></div><p>Оценка сложности переноса, критичности зависимостей, target mapping и подготовка миграционной последовательности.</p></article>
         </div>
       </div>
@@ -228,7 +214,7 @@
         <div class="cta-box">
           <div class="section-kicker">HONTI Analyzer</div>
           <p class="cta-title">От тысяч технических объектов — к пониманию системы.</p>
-          <p class="cta-sub">Если нужно разобрать существующий SAP-ландшафт, оценить зависимости или подготовить основу для миграции — обсудим пилот на реальном контуре.</p>
+          <p class="cta-sub">Если хотите исследовать зависимости своего SAP-ландшафта или обсудить пилот с реальными данными — напишите нам.</p>
           <div class="cta-actions"><a class="btn primary" href="mailto:info@honti-it.ru?subject=HONTI%20Analyzer">info@honti-it.ru</a></div>
         </div>
       </div>
@@ -238,9 +224,18 @@
   <footer>
     <div class="wrap footer-row">
       <span>© 2026 ООО «ХОНТИ» · HONTI Analyzer</span>
-      <a href="/">honti-it.ru</a>
-      <div class="footer-legal"><span>ИНН 9719090088</span><span>ОГРН 1267700307082</span></div>
     </div>
   </footer>
+<script>
+    // The embedded app has a different height on narrow screens and when controls expand.
+    const analyzerFrame = document.getElementById('analyzer-demo');
+    analyzerFrame.addEventListener('load', () => {
+      const inner = analyzerFrame.contentDocument;
+      if (!inner || !inner.body) return;
+      const resize = () => { analyzerFrame.style.height = Math.ceil(inner.documentElement.scrollHeight + 2) + 'px'; };
+      new ResizeObserver(resize).observe(inner.body);
+      resize();
+    });
+  </script>
 </body>
 </html>
