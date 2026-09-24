@@ -1,0 +1,6067 @@
+{
+  "schemaVersion": 1,
+  "title": "Развитие аналитического ландшафта",
+  "synthetic": true,
+  "types": {
+    "SYST": "Исходная система",
+    "RSDS": "Источник",
+    "TRCS": "Инфо-источник",
+    "ADSO": "Объект хранилища данных",
+    "HCPR": "Композитный провайдер",
+    "BEXQ": "Запрос"
+  },
+  "snapshots": [
+    {
+      "id": "snapshot-1",
+      "capturedAt": "2026-01-01T00:00:00Z",
+      "scope": "demo-landscape",
+      "complete": true,
+      "label": "Исходный ландшафт",
+      "nodes": [
+        {
+          "id": "DEMO_SYST_01",
+          "label": "Система 01",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_SYST_02",
+          "label": "Система 02",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_SYST_03",
+          "label": "Система 03",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_01",
+          "label": "Источник 01",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_02",
+          "label": "Источник 02",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_01",
+          "label": "Хранилище 01",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_01",
+          "label": "Инфо-источник 01",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_02",
+          "label": "Инфо-источник 02",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_02",
+          "label": "Хранилище 02",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_03",
+          "label": "Источник 03",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_03",
+          "label": "Хранилище 03",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_04",
+          "label": "Хранилище 04",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_05",
+          "label": "Хранилище 05",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_04",
+          "label": "Источник 04",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_06",
+          "label": "Хранилище 06",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_HCPR_01",
+          "label": "Провайдер 01",
+          "description": "Демонстрационный объект · провайдер",
+          "type": "HCPR",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_07",
+          "label": "Хранилище 07",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_05",
+          "label": "Источник 05",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_08",
+          "label": "Хранилище 08",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_09",
+          "label": "Хранилище 09",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_10",
+          "label": "Хранилище 10",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_06",
+          "label": "Источник 06",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_11",
+          "label": "Хранилище 11",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_12",
+          "label": "Хранилище 12",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_13",
+          "label": "Хранилище 13",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_14",
+          "label": "Хранилище 14",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_15",
+          "label": "Хранилище 15",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_07",
+          "label": "Источник 07",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_16",
+          "label": "Хранилище 16",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_03",
+          "label": "Инфо-источник 03",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_17",
+          "label": "Хранилище 17",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_18",
+          "label": "Хранилище 18",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_08",
+          "label": "Источник 08",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_19",
+          "label": "Хранилище 19",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_20",
+          "label": "Хранилище 20",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_09",
+          "label": "Источник 09",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_21",
+          "label": "Хранилище 21",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_22",
+          "label": "Хранилище 22",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_23",
+          "label": "Хранилище 23",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_10",
+          "label": "Источник 10",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_24",
+          "label": "Хранилище 24",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_04",
+          "label": "Инфо-источник 04",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_11",
+          "label": "Источник 11",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_25",
+          "label": "Хранилище 25",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_05",
+          "label": "Инфо-источник 05",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_26",
+          "label": "Хранилище 26",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_12",
+          "label": "Источник 12",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_27",
+          "label": "Хранилище 27",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_28",
+          "label": "Хранилище 28",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_13",
+          "label": "Источник 13",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_29",
+          "label": "Хранилище 29",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_30",
+          "label": "Хранилище 30",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_31",
+          "label": "Хранилище 31",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_HCPR_02",
+          "label": "Провайдер 02",
+          "description": "Демонстрационный объект · провайдер",
+          "type": "HCPR",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_01",
+          "label": "Отчёт 01",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_06",
+          "label": "Инфо-источник 06",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_02",
+          "label": "Отчёт 02",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_03",
+          "label": "Отчёт 03",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_04",
+          "label": "Отчёт 04",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "link-000",
+          "source": "DEMO_SYST_03",
+          "target": "DEMO_RSDS_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-001",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-002",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-003",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-004",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_05",
+          "type": "dependency"
+        },
+        {
+          "id": "link-005",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-006",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-007",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_08",
+          "type": "dependency"
+        },
+        {
+          "id": "link-008",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_09",
+          "type": "dependency"
+        },
+        {
+          "id": "link-009",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_10",
+          "type": "dependency"
+        },
+        {
+          "id": "link-010",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_11",
+          "type": "dependency"
+        },
+        {
+          "id": "link-011",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_12",
+          "type": "dependency"
+        },
+        {
+          "id": "link-012",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_13",
+          "type": "dependency"
+        },
+        {
+          "id": "link-013",
+          "source": "DEMO_RSDS_01",
+          "target": "DEMO_ADSO_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-014",
+          "source": "DEMO_RSDS_02",
+          "target": "DEMO_ADSO_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-015",
+          "source": "DEMO_RSDS_03",
+          "target": "DEMO_ADSO_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-016",
+          "source": "DEMO_RSDS_04",
+          "target": "DEMO_ADSO_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-017",
+          "source": "DEMO_RSDS_05",
+          "target": "DEMO_ADSO_08",
+          "type": "dependency"
+        },
+        {
+          "id": "link-018",
+          "source": "DEMO_RSDS_06",
+          "target": "DEMO_ADSO_11",
+          "type": "dependency"
+        },
+        {
+          "id": "link-019",
+          "source": "DEMO_RSDS_07",
+          "target": "DEMO_ADSO_16",
+          "type": "dependency"
+        },
+        {
+          "id": "link-020",
+          "source": "DEMO_RSDS_08",
+          "target": "DEMO_ADSO_19",
+          "type": "dependency"
+        },
+        {
+          "id": "link-021",
+          "source": "DEMO_RSDS_09",
+          "target": "DEMO_ADSO_21",
+          "type": "dependency"
+        },
+        {
+          "id": "link-022",
+          "source": "DEMO_RSDS_10",
+          "target": "DEMO_ADSO_24",
+          "type": "dependency"
+        },
+        {
+          "id": "link-023",
+          "source": "DEMO_RSDS_11",
+          "target": "DEMO_ADSO_25",
+          "type": "dependency"
+        },
+        {
+          "id": "link-024",
+          "source": "DEMO_RSDS_12",
+          "target": "DEMO_ADSO_27",
+          "type": "dependency"
+        },
+        {
+          "id": "link-025",
+          "source": "DEMO_RSDS_13",
+          "target": "DEMO_ADSO_29",
+          "type": "dependency"
+        },
+        {
+          "id": "link-026",
+          "source": "DEMO_ADSO_07",
+          "target": "DEMO_ADSO_17",
+          "type": "dependency"
+        },
+        {
+          "id": "link-027",
+          "source": "DEMO_ADSO_01",
+          "target": "DEMO_TRCS_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-028",
+          "source": "DEMO_ADSO_03",
+          "target": "DEMO_TRCS_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-029",
+          "source": "DEMO_ADSO_06",
+          "target": "DEMO_ADSO_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-030",
+          "source": "DEMO_ADSO_08",
+          "target": "DEMO_ADSO_09",
+          "type": "dependency"
+        },
+        {
+          "id": "link-031",
+          "source": "DEMO_ADSO_11",
+          "target": "DEMO_ADSO_12",
+          "type": "dependency"
+        },
+        {
+          "id": "link-032",
+          "source": "DEMO_ADSO_16",
+          "target": "DEMO_TRCS_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-033",
+          "source": "DEMO_ADSO_19",
+          "target": "DEMO_ADSO_20",
+          "type": "dependency"
+        },
+        {
+          "id": "link-034",
+          "source": "DEMO_ADSO_21",
+          "target": "DEMO_ADSO_22",
+          "type": "dependency"
+        },
+        {
+          "id": "link-035",
+          "source": "DEMO_ADSO_24",
+          "target": "DEMO_TRCS_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-036",
+          "source": "DEMO_ADSO_25",
+          "target": "DEMO_TRCS_05",
+          "type": "dependency"
+        },
+        {
+          "id": "link-037",
+          "source": "DEMO_ADSO_27",
+          "target": "DEMO_TRCS_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-038",
+          "source": "DEMO_ADSO_29",
+          "target": "DEMO_ADSO_30",
+          "type": "dependency"
+        },
+        {
+          "id": "link-039",
+          "source": "DEMO_ADSO_17",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-040",
+          "source": "DEMO_TRCS_01",
+          "target": "DEMO_ADSO_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-041",
+          "source": "DEMO_TRCS_02",
+          "target": "DEMO_ADSO_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-042",
+          "source": "DEMO_ADSO_09",
+          "target": "DEMO_ADSO_10",
+          "type": "dependency"
+        },
+        {
+          "id": "link-043",
+          "source": "DEMO_ADSO_12",
+          "target": "DEMO_ADSO_13",
+          "type": "dependency"
+        },
+        {
+          "id": "link-044",
+          "source": "DEMO_TRCS_03",
+          "target": "DEMO_ADSO_18",
+          "type": "dependency"
+        },
+        {
+          "id": "link-045",
+          "source": "DEMO_ADSO_20",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-046",
+          "source": "DEMO_ADSO_22",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-047",
+          "source": "DEMO_TRCS_04",
+          "target": "DEMO_ADSO_26",
+          "type": "dependency"
+        },
+        {
+          "id": "link-048",
+          "source": "DEMO_TRCS_05",
+          "target": "DEMO_ADSO_14",
+          "type": "dependency"
+        },
+        {
+          "id": "link-049",
+          "source": "DEMO_TRCS_05",
+          "target": "DEMO_ADSO_26",
+          "type": "dependency"
+        },
+        {
+          "id": "link-050",
+          "source": "DEMO_TRCS_06",
+          "target": "DEMO_ADSO_28",
+          "type": "dependency"
+        },
+        {
+          "id": "link-051",
+          "source": "DEMO_ADSO_30",
+          "target": "DEMO_ADSO_31",
+          "type": "dependency"
+        },
+        {
+          "id": "link-052",
+          "source": "DEMO_HCPR_02",
+          "target": "DEMO_BEXQ_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-053",
+          "source": "DEMO_ADSO_02",
+          "target": "DEMO_HCPR_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-054",
+          "source": "DEMO_ADSO_04",
+          "target": "DEMO_ADSO_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-055",
+          "source": "DEMO_ADSO_04",
+          "target": "DEMO_HCPR_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-056",
+          "source": "DEMO_ADSO_10",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-057",
+          "source": "DEMO_ADSO_13",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-058",
+          "source": "DEMO_ADSO_18",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-059",
+          "source": "DEMO_ADSO_26",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-060",
+          "source": "DEMO_ADSO_14",
+          "target": "DEMO_ADSO_15",
+          "type": "dependency"
+        },
+        {
+          "id": "link-061",
+          "source": "DEMO_ADSO_28",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-062",
+          "source": "DEMO_ADSO_31",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-063",
+          "source": "DEMO_HCPR_01",
+          "target": "DEMO_BEXQ_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-064",
+          "source": "DEMO_HCPR_01",
+          "target": "DEMO_BEXQ_03",
+          "type": "dependency"
+        }
+      ]
+    },
+    {
+      "id": "snapshot-2",
+      "capturedAt": "2026-02-01T00:00:00Z",
+      "scope": "demo-landscape",
+      "complete": true,
+      "label": "Новая витрина",
+      "nodes": [
+        {
+          "id": "DEMO_SYST_01",
+          "label": "Система 01",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_SYST_02",
+          "label": "Система 02",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_SYST_03",
+          "label": "Система 03",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_01",
+          "label": "Источник 01",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_02",
+          "label": "Источник 02",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_01",
+          "label": "Хранилище 01",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_01",
+          "label": "Инфо-источник 01",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_02",
+          "label": "Инфо-источник 02",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_02",
+          "label": "Хранилище 02",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_03",
+          "label": "Источник 03",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_03",
+          "label": "Хранилище 03",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_04",
+          "label": "Хранилище 04",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_05",
+          "label": "Хранилище 05",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_04",
+          "label": "Источник 04",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_06",
+          "label": "Хранилище 06",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_HCPR_01",
+          "label": "Провайдер 01",
+          "description": "Демонстрационный объект · провайдер",
+          "type": "HCPR",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_07",
+          "label": "Хранилище 07",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_05",
+          "label": "Источник 05",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_08",
+          "label": "Хранилище 08",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_09",
+          "label": "Хранилище 09",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_10",
+          "label": "Хранилище 10",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_06",
+          "label": "Источник 06",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_11",
+          "label": "Хранилище 11",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_12",
+          "label": "Хранилище 12",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_13",
+          "label": "Хранилище 13",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_14",
+          "label": "Хранилище 14",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_15",
+          "label": "Хранилище 15",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_07",
+          "label": "Источник 07",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_16",
+          "label": "Хранилище 16",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_03",
+          "label": "Инфо-источник 03",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_17",
+          "label": "Хранилище 17",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_18",
+          "label": "Хранилище 18",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_08",
+          "label": "Источник 08",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_19",
+          "label": "Хранилище 19",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_20",
+          "label": "Хранилище 20",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_09",
+          "label": "Источник 09",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_21",
+          "label": "Хранилище 21",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_22",
+          "label": "Хранилище 22",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_23",
+          "label": "Хранилище 23",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_10",
+          "label": "Источник 10",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_24",
+          "label": "Хранилище 24",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_04",
+          "label": "Инфо-источник 04",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_11",
+          "label": "Источник 11",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_25",
+          "label": "Хранилище 25",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_05",
+          "label": "Инфо-источник 05",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_26",
+          "label": "Хранилище 26",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_12",
+          "label": "Источник 12",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_27",
+          "label": "Хранилище 27",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_28",
+          "label": "Хранилище 28",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_13",
+          "label": "Источник 13",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_29",
+          "label": "Хранилище 29",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_30",
+          "label": "Хранилище 30",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_31",
+          "label": "Хранилище 31",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_HCPR_02",
+          "label": "Провайдер 02",
+          "description": "Демонстрационный объект · провайдер",
+          "type": "HCPR",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_01",
+          "label": "Отчёт 01",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_06",
+          "label": "Инфо-источник 06",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_02",
+          "label": "Отчёт 02",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_03",
+          "label": "Отчёт 03",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_04",
+          "label": "Отчёт 04",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_NEW",
+          "label": "Витрина продаж",
+          "description": "Объединённые данные продаж",
+          "type": "ADSO",
+          "attributes": {
+            "Версия": "1"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "link-000",
+          "source": "DEMO_SYST_03",
+          "target": "DEMO_RSDS_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-001",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-002",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-003",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-004",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_05",
+          "type": "dependency"
+        },
+        {
+          "id": "link-005",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-006",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-007",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_08",
+          "type": "dependency"
+        },
+        {
+          "id": "link-008",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_09",
+          "type": "dependency"
+        },
+        {
+          "id": "link-009",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_10",
+          "type": "dependency"
+        },
+        {
+          "id": "link-010",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_11",
+          "type": "dependency"
+        },
+        {
+          "id": "link-011",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_12",
+          "type": "dependency"
+        },
+        {
+          "id": "link-012",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_13",
+          "type": "dependency"
+        },
+        {
+          "id": "link-013",
+          "source": "DEMO_RSDS_01",
+          "target": "DEMO_ADSO_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-014",
+          "source": "DEMO_RSDS_02",
+          "target": "DEMO_ADSO_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-015",
+          "source": "DEMO_RSDS_03",
+          "target": "DEMO_ADSO_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-016",
+          "source": "DEMO_RSDS_04",
+          "target": "DEMO_ADSO_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-017",
+          "source": "DEMO_RSDS_05",
+          "target": "DEMO_ADSO_08",
+          "type": "dependency"
+        },
+        {
+          "id": "link-018",
+          "source": "DEMO_RSDS_06",
+          "target": "DEMO_ADSO_11",
+          "type": "dependency"
+        },
+        {
+          "id": "link-019",
+          "source": "DEMO_RSDS_07",
+          "target": "DEMO_ADSO_16",
+          "type": "dependency"
+        },
+        {
+          "id": "link-020",
+          "source": "DEMO_RSDS_08",
+          "target": "DEMO_ADSO_19",
+          "type": "dependency"
+        },
+        {
+          "id": "link-021",
+          "source": "DEMO_RSDS_09",
+          "target": "DEMO_ADSO_21",
+          "type": "dependency"
+        },
+        {
+          "id": "link-022",
+          "source": "DEMO_RSDS_10",
+          "target": "DEMO_ADSO_24",
+          "type": "dependency"
+        },
+        {
+          "id": "link-023",
+          "source": "DEMO_RSDS_11",
+          "target": "DEMO_ADSO_25",
+          "type": "dependency"
+        },
+        {
+          "id": "link-024",
+          "source": "DEMO_RSDS_12",
+          "target": "DEMO_ADSO_27",
+          "type": "dependency"
+        },
+        {
+          "id": "link-025",
+          "source": "DEMO_RSDS_13",
+          "target": "DEMO_ADSO_29",
+          "type": "dependency"
+        },
+        {
+          "id": "link-026",
+          "source": "DEMO_ADSO_07",
+          "target": "DEMO_ADSO_17",
+          "type": "dependency"
+        },
+        {
+          "id": "link-027",
+          "source": "DEMO_ADSO_01",
+          "target": "DEMO_TRCS_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-028",
+          "source": "DEMO_ADSO_03",
+          "target": "DEMO_TRCS_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-029",
+          "source": "DEMO_ADSO_06",
+          "target": "DEMO_ADSO_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-030",
+          "source": "DEMO_ADSO_08",
+          "target": "DEMO_ADSO_09",
+          "type": "dependency"
+        },
+        {
+          "id": "link-031",
+          "source": "DEMO_ADSO_11",
+          "target": "DEMO_ADSO_12",
+          "type": "dependency"
+        },
+        {
+          "id": "link-032",
+          "source": "DEMO_ADSO_16",
+          "target": "DEMO_TRCS_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-033",
+          "source": "DEMO_ADSO_19",
+          "target": "DEMO_ADSO_20",
+          "type": "dependency"
+        },
+        {
+          "id": "link-034",
+          "source": "DEMO_ADSO_21",
+          "target": "DEMO_ADSO_22",
+          "type": "dependency"
+        },
+        {
+          "id": "link-035",
+          "source": "DEMO_ADSO_24",
+          "target": "DEMO_TRCS_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-036",
+          "source": "DEMO_ADSO_25",
+          "target": "DEMO_TRCS_05",
+          "type": "dependency"
+        },
+        {
+          "id": "link-037",
+          "source": "DEMO_ADSO_27",
+          "target": "DEMO_TRCS_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-038",
+          "source": "DEMO_ADSO_29",
+          "target": "DEMO_ADSO_30",
+          "type": "dependency"
+        },
+        {
+          "id": "link-039",
+          "source": "DEMO_ADSO_17",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-040",
+          "source": "DEMO_TRCS_01",
+          "target": "DEMO_ADSO_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-041",
+          "source": "DEMO_TRCS_02",
+          "target": "DEMO_ADSO_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-042",
+          "source": "DEMO_ADSO_09",
+          "target": "DEMO_ADSO_10",
+          "type": "dependency"
+        },
+        {
+          "id": "link-043",
+          "source": "DEMO_ADSO_12",
+          "target": "DEMO_ADSO_13",
+          "type": "dependency"
+        },
+        {
+          "id": "link-044",
+          "source": "DEMO_TRCS_03",
+          "target": "DEMO_ADSO_18",
+          "type": "dependency"
+        },
+        {
+          "id": "link-045",
+          "source": "DEMO_ADSO_20",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-046",
+          "source": "DEMO_ADSO_22",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-047",
+          "source": "DEMO_TRCS_04",
+          "target": "DEMO_ADSO_26",
+          "type": "dependency"
+        },
+        {
+          "id": "link-048",
+          "source": "DEMO_TRCS_05",
+          "target": "DEMO_ADSO_14",
+          "type": "dependency"
+        },
+        {
+          "id": "link-049",
+          "source": "DEMO_TRCS_05",
+          "target": "DEMO_ADSO_26",
+          "type": "dependency"
+        },
+        {
+          "id": "link-050",
+          "source": "DEMO_TRCS_06",
+          "target": "DEMO_ADSO_28",
+          "type": "dependency"
+        },
+        {
+          "id": "link-051",
+          "source": "DEMO_ADSO_30",
+          "target": "DEMO_ADSO_31",
+          "type": "dependency"
+        },
+        {
+          "id": "link-052",
+          "source": "DEMO_HCPR_02",
+          "target": "DEMO_BEXQ_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-053",
+          "source": "DEMO_ADSO_02",
+          "target": "DEMO_HCPR_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-054",
+          "source": "DEMO_ADSO_04",
+          "target": "DEMO_ADSO_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-055",
+          "source": "DEMO_ADSO_04",
+          "target": "DEMO_HCPR_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-056",
+          "source": "DEMO_ADSO_10",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-057",
+          "source": "DEMO_ADSO_13",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-058",
+          "source": "DEMO_ADSO_18",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-059",
+          "source": "DEMO_ADSO_26",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-060",
+          "source": "DEMO_ADSO_14",
+          "target": "DEMO_ADSO_15",
+          "type": "dependency"
+        },
+        {
+          "id": "link-061",
+          "source": "DEMO_ADSO_28",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-062",
+          "source": "DEMO_ADSO_31",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-063",
+          "source": "DEMO_HCPR_01",
+          "target": "DEMO_BEXQ_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-064",
+          "source": "DEMO_HCPR_01",
+          "target": "DEMO_BEXQ_03",
+          "type": "dependency"
+        },
+        {
+          "id": "new-feed",
+          "source": "DEMO_ADSO_01",
+          "target": "DEMO_ADSO_NEW",
+          "type": "dependency"
+        }
+      ]
+    },
+    {
+      "id": "snapshot-3",
+      "capturedAt": "2026-03-01T00:00:00Z",
+      "scope": "demo-landscape",
+      "complete": true,
+      "label": "Новый отчёт",
+      "nodes": [
+        {
+          "id": "DEMO_SYST_01",
+          "label": "Система 01",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_SYST_02",
+          "label": "Система 02",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_SYST_03",
+          "label": "Система 03",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_01",
+          "label": "Источник 01",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_02",
+          "label": "Источник 02",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_01",
+          "label": "Хранилище 01",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_01",
+          "label": "Инфо-источник 01",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_02",
+          "label": "Инфо-источник 02",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_02",
+          "label": "Хранилище 02",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_03",
+          "label": "Источник 03",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_03",
+          "label": "Хранилище 03",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_04",
+          "label": "Хранилище 04",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_05",
+          "label": "Хранилище 05",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_04",
+          "label": "Источник 04",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_06",
+          "label": "Хранилище 06",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_HCPR_01",
+          "label": "Провайдер 01",
+          "description": "Демонстрационный объект · провайдер",
+          "type": "HCPR",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_07",
+          "label": "Хранилище 07",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_05",
+          "label": "Источник 05",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_08",
+          "label": "Хранилище 08",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_09",
+          "label": "Хранилище 09",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_10",
+          "label": "Хранилище 10",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_06",
+          "label": "Источник 06",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_11",
+          "label": "Хранилище 11",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_12",
+          "label": "Хранилище 12",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_13",
+          "label": "Хранилище 13",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_14",
+          "label": "Хранилище 14",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_15",
+          "label": "Хранилище 15",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_07",
+          "label": "Источник 07",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_16",
+          "label": "Хранилище 16",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_03",
+          "label": "Инфо-источник 03",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_17",
+          "label": "Хранилище 17",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_18",
+          "label": "Хранилище 18",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_08",
+          "label": "Источник 08",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_19",
+          "label": "Хранилище 19",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_20",
+          "label": "Хранилище 20",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_09",
+          "label": "Источник 09",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_21",
+          "label": "Хранилище 21",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_22",
+          "label": "Хранилище 22",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_23",
+          "label": "Хранилище 23",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_10",
+          "label": "Источник 10",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_24",
+          "label": "Хранилище 24",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_04",
+          "label": "Инфо-источник 04",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_11",
+          "label": "Источник 11",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_25",
+          "label": "Хранилище 25",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_05",
+          "label": "Инфо-источник 05",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_26",
+          "label": "Хранилище 26",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_12",
+          "label": "Источник 12",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_27",
+          "label": "Хранилище 27",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_28",
+          "label": "Хранилище 28",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_13",
+          "label": "Источник 13",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_29",
+          "label": "Хранилище 29",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_30",
+          "label": "Хранилище 30",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_31",
+          "label": "Хранилище 31",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_HCPR_02",
+          "label": "Провайдер 02",
+          "description": "Демонстрационный объект · провайдер",
+          "type": "HCPR",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_01",
+          "label": "Отчёт 01",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_06",
+          "label": "Инфо-источник 06",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_02",
+          "label": "Отчёт 02",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_03",
+          "label": "Отчёт 03",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_04",
+          "label": "Отчёт 04",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_NEW",
+          "label": "Витрина продаж",
+          "description": "Объединённые данные продаж",
+          "type": "ADSO",
+          "attributes": {
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_QUERY_NEW",
+          "label": "Продажи по регионам",
+          "description": "Новый аналитический отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Версия": "1"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "link-000",
+          "source": "DEMO_SYST_03",
+          "target": "DEMO_RSDS_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-001",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-002",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-003",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-004",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_05",
+          "type": "dependency"
+        },
+        {
+          "id": "link-005",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-006",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-007",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_08",
+          "type": "dependency"
+        },
+        {
+          "id": "link-008",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_09",
+          "type": "dependency"
+        },
+        {
+          "id": "link-009",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_10",
+          "type": "dependency"
+        },
+        {
+          "id": "link-010",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_11",
+          "type": "dependency"
+        },
+        {
+          "id": "link-011",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_12",
+          "type": "dependency"
+        },
+        {
+          "id": "link-012",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_13",
+          "type": "dependency"
+        },
+        {
+          "id": "link-013",
+          "source": "DEMO_RSDS_01",
+          "target": "DEMO_ADSO_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-014",
+          "source": "DEMO_RSDS_02",
+          "target": "DEMO_ADSO_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-015",
+          "source": "DEMO_RSDS_03",
+          "target": "DEMO_ADSO_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-016",
+          "source": "DEMO_RSDS_04",
+          "target": "DEMO_ADSO_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-017",
+          "source": "DEMO_RSDS_05",
+          "target": "DEMO_ADSO_08",
+          "type": "dependency"
+        },
+        {
+          "id": "link-018",
+          "source": "DEMO_RSDS_06",
+          "target": "DEMO_ADSO_11",
+          "type": "dependency"
+        },
+        {
+          "id": "link-019",
+          "source": "DEMO_RSDS_07",
+          "target": "DEMO_ADSO_16",
+          "type": "dependency"
+        },
+        {
+          "id": "link-020",
+          "source": "DEMO_RSDS_08",
+          "target": "DEMO_ADSO_19",
+          "type": "dependency"
+        },
+        {
+          "id": "link-021",
+          "source": "DEMO_RSDS_09",
+          "target": "DEMO_ADSO_21",
+          "type": "dependency"
+        },
+        {
+          "id": "link-022",
+          "source": "DEMO_RSDS_10",
+          "target": "DEMO_ADSO_24",
+          "type": "dependency"
+        },
+        {
+          "id": "link-023",
+          "source": "DEMO_RSDS_11",
+          "target": "DEMO_ADSO_25",
+          "type": "dependency"
+        },
+        {
+          "id": "link-024",
+          "source": "DEMO_RSDS_12",
+          "target": "DEMO_ADSO_27",
+          "type": "dependency"
+        },
+        {
+          "id": "link-025",
+          "source": "DEMO_RSDS_13",
+          "target": "DEMO_ADSO_29",
+          "type": "dependency"
+        },
+        {
+          "id": "link-026",
+          "source": "DEMO_ADSO_07",
+          "target": "DEMO_ADSO_17",
+          "type": "dependency"
+        },
+        {
+          "id": "link-027",
+          "source": "DEMO_ADSO_01",
+          "target": "DEMO_TRCS_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-028",
+          "source": "DEMO_ADSO_03",
+          "target": "DEMO_TRCS_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-029",
+          "source": "DEMO_ADSO_06",
+          "target": "DEMO_ADSO_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-030",
+          "source": "DEMO_ADSO_08",
+          "target": "DEMO_ADSO_09",
+          "type": "dependency"
+        },
+        {
+          "id": "link-031",
+          "source": "DEMO_ADSO_11",
+          "target": "DEMO_ADSO_12",
+          "type": "dependency"
+        },
+        {
+          "id": "link-032",
+          "source": "DEMO_ADSO_16",
+          "target": "DEMO_TRCS_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-033",
+          "source": "DEMO_ADSO_19",
+          "target": "DEMO_ADSO_20",
+          "type": "dependency"
+        },
+        {
+          "id": "link-034",
+          "source": "DEMO_ADSO_21",
+          "target": "DEMO_ADSO_22",
+          "type": "dependency"
+        },
+        {
+          "id": "link-035",
+          "source": "DEMO_ADSO_24",
+          "target": "DEMO_TRCS_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-036",
+          "source": "DEMO_ADSO_25",
+          "target": "DEMO_TRCS_05",
+          "type": "dependency"
+        },
+        {
+          "id": "link-037",
+          "source": "DEMO_ADSO_27",
+          "target": "DEMO_TRCS_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-038",
+          "source": "DEMO_ADSO_29",
+          "target": "DEMO_ADSO_30",
+          "type": "dependency"
+        },
+        {
+          "id": "link-039",
+          "source": "DEMO_ADSO_17",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-040",
+          "source": "DEMO_TRCS_01",
+          "target": "DEMO_ADSO_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-041",
+          "source": "DEMO_TRCS_02",
+          "target": "DEMO_ADSO_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-042",
+          "source": "DEMO_ADSO_09",
+          "target": "DEMO_ADSO_10",
+          "type": "dependency"
+        },
+        {
+          "id": "link-043",
+          "source": "DEMO_ADSO_12",
+          "target": "DEMO_ADSO_13",
+          "type": "dependency"
+        },
+        {
+          "id": "link-044",
+          "source": "DEMO_TRCS_03",
+          "target": "DEMO_ADSO_18",
+          "type": "dependency"
+        },
+        {
+          "id": "link-045",
+          "source": "DEMO_ADSO_20",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-046",
+          "source": "DEMO_ADSO_22",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-047",
+          "source": "DEMO_TRCS_04",
+          "target": "DEMO_ADSO_26",
+          "type": "dependency"
+        },
+        {
+          "id": "link-048",
+          "source": "DEMO_TRCS_05",
+          "target": "DEMO_ADSO_14",
+          "type": "dependency"
+        },
+        {
+          "id": "link-049",
+          "source": "DEMO_TRCS_05",
+          "target": "DEMO_ADSO_26",
+          "type": "dependency"
+        },
+        {
+          "id": "link-050",
+          "source": "DEMO_TRCS_06",
+          "target": "DEMO_ADSO_28",
+          "type": "dependency"
+        },
+        {
+          "id": "link-051",
+          "source": "DEMO_ADSO_30",
+          "target": "DEMO_ADSO_31",
+          "type": "dependency"
+        },
+        {
+          "id": "link-052",
+          "source": "DEMO_HCPR_02",
+          "target": "DEMO_BEXQ_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-053",
+          "source": "DEMO_ADSO_02",
+          "target": "DEMO_HCPR_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-054",
+          "source": "DEMO_ADSO_04",
+          "target": "DEMO_ADSO_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-055",
+          "source": "DEMO_ADSO_04",
+          "target": "DEMO_HCPR_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-056",
+          "source": "DEMO_ADSO_10",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-057",
+          "source": "DEMO_ADSO_13",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-058",
+          "source": "DEMO_ADSO_18",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-059",
+          "source": "DEMO_ADSO_26",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-060",
+          "source": "DEMO_ADSO_14",
+          "target": "DEMO_ADSO_15",
+          "type": "dependency"
+        },
+        {
+          "id": "link-061",
+          "source": "DEMO_ADSO_28",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-062",
+          "source": "DEMO_ADSO_31",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-063",
+          "source": "DEMO_HCPR_01",
+          "target": "DEMO_BEXQ_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-064",
+          "source": "DEMO_HCPR_01",
+          "target": "DEMO_BEXQ_03",
+          "type": "dependency"
+        },
+        {
+          "id": "new-feed",
+          "source": "DEMO_ADSO_01",
+          "target": "DEMO_ADSO_NEW",
+          "type": "dependency"
+        },
+        {
+          "id": "new-report",
+          "source": "DEMO_ADSO_NEW",
+          "target": "DEMO_QUERY_NEW",
+          "type": "dependency"
+        }
+      ]
+    },
+    {
+      "id": "snapshot-4",
+      "capturedAt": "2026-04-01T00:00:00Z",
+      "scope": "demo-landscape",
+      "complete": true,
+      "label": "Изменение витрины",
+      "nodes": [
+        {
+          "id": "DEMO_SYST_01",
+          "label": "Система 01",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_SYST_02",
+          "label": "Система 02",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_SYST_03",
+          "label": "Система 03",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_01",
+          "label": "Источник 01",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_02",
+          "label": "Источник 02",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_01",
+          "label": "Хранилище 01",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_01",
+          "label": "Инфо-источник 01",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_02",
+          "label": "Инфо-источник 02",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_02",
+          "label": "Хранилище 02",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_03",
+          "label": "Источник 03",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_03",
+          "label": "Хранилище 03",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_04",
+          "label": "Хранилище 04",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_05",
+          "label": "Хранилище 05",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_04",
+          "label": "Источник 04",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_06",
+          "label": "Хранилище 06",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_HCPR_01",
+          "label": "Провайдер 01",
+          "description": "Демонстрационный объект · провайдер",
+          "type": "HCPR",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_07",
+          "label": "Хранилище 07",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_05",
+          "label": "Источник 05",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_08",
+          "label": "Хранилище 08",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_09",
+          "label": "Хранилище 09",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_10",
+          "label": "Хранилище 10",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_06",
+          "label": "Источник 06",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_11",
+          "label": "Хранилище 11",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_12",
+          "label": "Хранилище 12",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_13",
+          "label": "Хранилище 13",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_14",
+          "label": "Хранилище 14",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_15",
+          "label": "Хранилище 15",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_07",
+          "label": "Источник 07",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_16",
+          "label": "Хранилище 16",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_03",
+          "label": "Инфо-источник 03",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_17",
+          "label": "Хранилище 17",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_18",
+          "label": "Хранилище 18",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_08",
+          "label": "Источник 08",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_19",
+          "label": "Хранилище 19",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_20",
+          "label": "Хранилище 20",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_09",
+          "label": "Источник 09",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_21",
+          "label": "Хранилище 21",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_22",
+          "label": "Хранилище 22",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_23",
+          "label": "Хранилище 23",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_10",
+          "label": "Источник 10",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_24",
+          "label": "Хранилище 24",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_04",
+          "label": "Инфо-источник 04",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_11",
+          "label": "Источник 11",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_25",
+          "label": "Хранилище 25",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_05",
+          "label": "Инфо-источник 05",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_26",
+          "label": "Хранилище 26",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_12",
+          "label": "Источник 12",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_27",
+          "label": "Хранилище 27",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_28",
+          "label": "Хранилище 28",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_13",
+          "label": "Источник 13",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_29",
+          "label": "Хранилище 29",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_30",
+          "label": "Хранилище 30",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_31",
+          "label": "Хранилище 31",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_HCPR_02",
+          "label": "Провайдер 02",
+          "description": "Демонстрационный объект · провайдер",
+          "type": "HCPR",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_01",
+          "label": "Отчёт 01",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_06",
+          "label": "Инфо-источник 06",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_02",
+          "label": "Отчёт 02",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_03",
+          "label": "Отчёт 03",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_04",
+          "label": "Отчёт 04",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_NEW",
+          "label": "Витрина продаж",
+          "description": "Добавлена региональная детализация",
+          "type": "ADSO",
+          "attributes": {
+            "Версия": "2",
+            "Гранулярность": "Регион / месяц"
+          }
+        },
+        {
+          "id": "DEMO_QUERY_NEW",
+          "label": "Продажи по регионам",
+          "description": "Новый аналитический отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Версия": "1"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "link-000",
+          "source": "DEMO_SYST_03",
+          "target": "DEMO_RSDS_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-001",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-002",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-003",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-004",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_05",
+          "type": "dependency"
+        },
+        {
+          "id": "link-005",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-006",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-007",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_08",
+          "type": "dependency"
+        },
+        {
+          "id": "link-008",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_09",
+          "type": "dependency"
+        },
+        {
+          "id": "link-009",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_10",
+          "type": "dependency"
+        },
+        {
+          "id": "link-010",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_11",
+          "type": "dependency"
+        },
+        {
+          "id": "link-011",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_12",
+          "type": "dependency"
+        },
+        {
+          "id": "link-012",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_13",
+          "type": "dependency"
+        },
+        {
+          "id": "link-013",
+          "source": "DEMO_RSDS_01",
+          "target": "DEMO_ADSO_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-014",
+          "source": "DEMO_RSDS_02",
+          "target": "DEMO_ADSO_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-015",
+          "source": "DEMO_RSDS_03",
+          "target": "DEMO_ADSO_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-016",
+          "source": "DEMO_RSDS_04",
+          "target": "DEMO_ADSO_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-017",
+          "source": "DEMO_RSDS_05",
+          "target": "DEMO_ADSO_08",
+          "type": "dependency"
+        },
+        {
+          "id": "link-018",
+          "source": "DEMO_RSDS_06",
+          "target": "DEMO_ADSO_11",
+          "type": "dependency"
+        },
+        {
+          "id": "link-019",
+          "source": "DEMO_RSDS_07",
+          "target": "DEMO_ADSO_16",
+          "type": "dependency"
+        },
+        {
+          "id": "link-020",
+          "source": "DEMO_RSDS_08",
+          "target": "DEMO_ADSO_19",
+          "type": "dependency"
+        },
+        {
+          "id": "link-021",
+          "source": "DEMO_RSDS_09",
+          "target": "DEMO_ADSO_21",
+          "type": "dependency"
+        },
+        {
+          "id": "link-022",
+          "source": "DEMO_RSDS_10",
+          "target": "DEMO_ADSO_24",
+          "type": "dependency"
+        },
+        {
+          "id": "link-023",
+          "source": "DEMO_RSDS_11",
+          "target": "DEMO_ADSO_25",
+          "type": "dependency"
+        },
+        {
+          "id": "link-024",
+          "source": "DEMO_RSDS_12",
+          "target": "DEMO_ADSO_27",
+          "type": "dependency"
+        },
+        {
+          "id": "link-025",
+          "source": "DEMO_RSDS_13",
+          "target": "DEMO_ADSO_29",
+          "type": "dependency"
+        },
+        {
+          "id": "link-026",
+          "source": "DEMO_ADSO_07",
+          "target": "DEMO_ADSO_17",
+          "type": "dependency"
+        },
+        {
+          "id": "link-027",
+          "source": "DEMO_ADSO_01",
+          "target": "DEMO_TRCS_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-028",
+          "source": "DEMO_ADSO_03",
+          "target": "DEMO_TRCS_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-029",
+          "source": "DEMO_ADSO_06",
+          "target": "DEMO_ADSO_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-030",
+          "source": "DEMO_ADSO_08",
+          "target": "DEMO_ADSO_09",
+          "type": "dependency"
+        },
+        {
+          "id": "link-031",
+          "source": "DEMO_ADSO_11",
+          "target": "DEMO_ADSO_12",
+          "type": "dependency"
+        },
+        {
+          "id": "link-032",
+          "source": "DEMO_ADSO_16",
+          "target": "DEMO_TRCS_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-033",
+          "source": "DEMO_ADSO_19",
+          "target": "DEMO_ADSO_20",
+          "type": "dependency"
+        },
+        {
+          "id": "link-034",
+          "source": "DEMO_ADSO_21",
+          "target": "DEMO_ADSO_22",
+          "type": "dependency"
+        },
+        {
+          "id": "link-035",
+          "source": "DEMO_ADSO_24",
+          "target": "DEMO_TRCS_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-036",
+          "source": "DEMO_ADSO_25",
+          "target": "DEMO_TRCS_05",
+          "type": "dependency"
+        },
+        {
+          "id": "link-037",
+          "source": "DEMO_ADSO_27",
+          "target": "DEMO_TRCS_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-038",
+          "source": "DEMO_ADSO_29",
+          "target": "DEMO_ADSO_30",
+          "type": "dependency"
+        },
+        {
+          "id": "link-039",
+          "source": "DEMO_ADSO_17",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-040",
+          "source": "DEMO_TRCS_01",
+          "target": "DEMO_ADSO_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-041",
+          "source": "DEMO_TRCS_02",
+          "target": "DEMO_ADSO_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-042",
+          "source": "DEMO_ADSO_09",
+          "target": "DEMO_ADSO_10",
+          "type": "dependency"
+        },
+        {
+          "id": "link-043",
+          "source": "DEMO_ADSO_12",
+          "target": "DEMO_ADSO_13",
+          "type": "dependency"
+        },
+        {
+          "id": "link-044",
+          "source": "DEMO_TRCS_03",
+          "target": "DEMO_ADSO_18",
+          "type": "dependency"
+        },
+        {
+          "id": "link-045",
+          "source": "DEMO_ADSO_20",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-046",
+          "source": "DEMO_ADSO_22",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-047",
+          "source": "DEMO_TRCS_04",
+          "target": "DEMO_ADSO_26",
+          "type": "dependency"
+        },
+        {
+          "id": "link-048",
+          "source": "DEMO_TRCS_05",
+          "target": "DEMO_ADSO_14",
+          "type": "dependency"
+        },
+        {
+          "id": "link-049",
+          "source": "DEMO_TRCS_05",
+          "target": "DEMO_ADSO_26",
+          "type": "dependency"
+        },
+        {
+          "id": "link-050",
+          "source": "DEMO_TRCS_06",
+          "target": "DEMO_ADSO_28",
+          "type": "dependency"
+        },
+        {
+          "id": "link-051",
+          "source": "DEMO_ADSO_30",
+          "target": "DEMO_ADSO_31",
+          "type": "dependency"
+        },
+        {
+          "id": "link-052",
+          "source": "DEMO_HCPR_02",
+          "target": "DEMO_BEXQ_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-053",
+          "source": "DEMO_ADSO_02",
+          "target": "DEMO_HCPR_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-054",
+          "source": "DEMO_ADSO_04",
+          "target": "DEMO_ADSO_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-055",
+          "source": "DEMO_ADSO_04",
+          "target": "DEMO_HCPR_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-056",
+          "source": "DEMO_ADSO_10",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-057",
+          "source": "DEMO_ADSO_13",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-058",
+          "source": "DEMO_ADSO_18",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-059",
+          "source": "DEMO_ADSO_26",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-060",
+          "source": "DEMO_ADSO_14",
+          "target": "DEMO_ADSO_15",
+          "type": "dependency"
+        },
+        {
+          "id": "link-061",
+          "source": "DEMO_ADSO_28",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-062",
+          "source": "DEMO_ADSO_31",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-063",
+          "source": "DEMO_HCPR_01",
+          "target": "DEMO_BEXQ_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-064",
+          "source": "DEMO_HCPR_01",
+          "target": "DEMO_BEXQ_03",
+          "type": "dependency"
+        },
+        {
+          "id": "new-feed",
+          "source": "DEMO_ADSO_01",
+          "target": "DEMO_ADSO_NEW",
+          "type": "dependency"
+        },
+        {
+          "id": "new-report",
+          "source": "DEMO_ADSO_NEW",
+          "target": "DEMO_QUERY_NEW",
+          "type": "dependency"
+        }
+      ]
+    },
+    {
+      "id": "snapshot-5",
+      "capturedAt": "2026-05-01T00:00:00Z",
+      "scope": "demo-landscape",
+      "complete": true,
+      "label": "Вывод старого отчёта",
+      "nodes": [
+        {
+          "id": "DEMO_SYST_01",
+          "label": "Система 01",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_SYST_02",
+          "label": "Система 02",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_SYST_03",
+          "label": "Система 03",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_01",
+          "label": "Источник 01",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_02",
+          "label": "Источник 02",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_01",
+          "label": "Хранилище 01",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_01",
+          "label": "Инфо-источник 01",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_02",
+          "label": "Инфо-источник 02",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_02",
+          "label": "Хранилище 02",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_03",
+          "label": "Источник 03",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_03",
+          "label": "Хранилище 03",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_04",
+          "label": "Хранилище 04",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_05",
+          "label": "Хранилище 05",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_04",
+          "label": "Источник 04",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_06",
+          "label": "Хранилище 06",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_HCPR_01",
+          "label": "Провайдер 01",
+          "description": "Демонстрационный объект · провайдер",
+          "type": "HCPR",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_07",
+          "label": "Хранилище 07",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_05",
+          "label": "Источник 05",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_08",
+          "label": "Хранилище 08",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_09",
+          "label": "Хранилище 09",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_10",
+          "label": "Хранилище 10",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_06",
+          "label": "Источник 06",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_11",
+          "label": "Хранилище 11",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_12",
+          "label": "Хранилище 12",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_13",
+          "label": "Хранилище 13",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_14",
+          "label": "Хранилище 14",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_15",
+          "label": "Хранилище 15",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_07",
+          "label": "Источник 07",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_16",
+          "label": "Хранилище 16",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_03",
+          "label": "Инфо-источник 03",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_17",
+          "label": "Хранилище 17",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_18",
+          "label": "Хранилище 18",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_08",
+          "label": "Источник 08",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_19",
+          "label": "Хранилище 19",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_20",
+          "label": "Хранилище 20",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_09",
+          "label": "Источник 09",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_21",
+          "label": "Хранилище 21",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_22",
+          "label": "Хранилище 22",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_23",
+          "label": "Хранилище 23",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_10",
+          "label": "Источник 10",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_24",
+          "label": "Хранилище 24",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_04",
+          "label": "Инфо-источник 04",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_11",
+          "label": "Источник 11",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_25",
+          "label": "Хранилище 25",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_05",
+          "label": "Инфо-источник 05",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_26",
+          "label": "Хранилище 26",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_12",
+          "label": "Источник 12",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_27",
+          "label": "Хранилище 27",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_28",
+          "label": "Хранилище 28",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_13",
+          "label": "Источник 13",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_29",
+          "label": "Хранилище 29",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_30",
+          "label": "Хранилище 30",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_31",
+          "label": "Хранилище 31",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_HCPR_02",
+          "label": "Провайдер 02",
+          "description": "Демонстрационный объект · провайдер",
+          "type": "HCPR",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_06",
+          "label": "Инфо-источник 06",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_02",
+          "label": "Отчёт 02",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_03",
+          "label": "Отчёт 03",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_04",
+          "label": "Отчёт 04",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_NEW",
+          "label": "Витрина продаж",
+          "description": "Добавлена региональная детализация",
+          "type": "ADSO",
+          "attributes": {
+            "Версия": "2",
+            "Гранулярность": "Регион / месяц"
+          }
+        },
+        {
+          "id": "DEMO_QUERY_NEW",
+          "label": "Продажи по регионам",
+          "description": "Новый аналитический отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Версия": "1"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "link-000",
+          "source": "DEMO_SYST_03",
+          "target": "DEMO_RSDS_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-001",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-002",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-003",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-004",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_05",
+          "type": "dependency"
+        },
+        {
+          "id": "link-005",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-006",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-007",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_08",
+          "type": "dependency"
+        },
+        {
+          "id": "link-008",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_09",
+          "type": "dependency"
+        },
+        {
+          "id": "link-009",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_10",
+          "type": "dependency"
+        },
+        {
+          "id": "link-010",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_11",
+          "type": "dependency"
+        },
+        {
+          "id": "link-011",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_12",
+          "type": "dependency"
+        },
+        {
+          "id": "link-012",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_13",
+          "type": "dependency"
+        },
+        {
+          "id": "link-013",
+          "source": "DEMO_RSDS_01",
+          "target": "DEMO_ADSO_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-014",
+          "source": "DEMO_RSDS_02",
+          "target": "DEMO_ADSO_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-015",
+          "source": "DEMO_RSDS_03",
+          "target": "DEMO_ADSO_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-016",
+          "source": "DEMO_RSDS_04",
+          "target": "DEMO_ADSO_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-017",
+          "source": "DEMO_RSDS_05",
+          "target": "DEMO_ADSO_08",
+          "type": "dependency"
+        },
+        {
+          "id": "link-018",
+          "source": "DEMO_RSDS_06",
+          "target": "DEMO_ADSO_11",
+          "type": "dependency"
+        },
+        {
+          "id": "link-019",
+          "source": "DEMO_RSDS_07",
+          "target": "DEMO_ADSO_16",
+          "type": "dependency"
+        },
+        {
+          "id": "link-020",
+          "source": "DEMO_RSDS_08",
+          "target": "DEMO_ADSO_19",
+          "type": "dependency"
+        },
+        {
+          "id": "link-021",
+          "source": "DEMO_RSDS_09",
+          "target": "DEMO_ADSO_21",
+          "type": "dependency"
+        },
+        {
+          "id": "link-022",
+          "source": "DEMO_RSDS_10",
+          "target": "DEMO_ADSO_24",
+          "type": "dependency"
+        },
+        {
+          "id": "link-023",
+          "source": "DEMO_RSDS_11",
+          "target": "DEMO_ADSO_25",
+          "type": "dependency"
+        },
+        {
+          "id": "link-024",
+          "source": "DEMO_RSDS_12",
+          "target": "DEMO_ADSO_27",
+          "type": "dependency"
+        },
+        {
+          "id": "link-025",
+          "source": "DEMO_RSDS_13",
+          "target": "DEMO_ADSO_29",
+          "type": "dependency"
+        },
+        {
+          "id": "link-026",
+          "source": "DEMO_ADSO_07",
+          "target": "DEMO_ADSO_17",
+          "type": "dependency"
+        },
+        {
+          "id": "link-027",
+          "source": "DEMO_ADSO_01",
+          "target": "DEMO_TRCS_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-028",
+          "source": "DEMO_ADSO_03",
+          "target": "DEMO_TRCS_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-029",
+          "source": "DEMO_ADSO_06",
+          "target": "DEMO_ADSO_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-030",
+          "source": "DEMO_ADSO_08",
+          "target": "DEMO_ADSO_09",
+          "type": "dependency"
+        },
+        {
+          "id": "link-031",
+          "source": "DEMO_ADSO_11",
+          "target": "DEMO_ADSO_12",
+          "type": "dependency"
+        },
+        {
+          "id": "link-032",
+          "source": "DEMO_ADSO_16",
+          "target": "DEMO_TRCS_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-033",
+          "source": "DEMO_ADSO_19",
+          "target": "DEMO_ADSO_20",
+          "type": "dependency"
+        },
+        {
+          "id": "link-034",
+          "source": "DEMO_ADSO_21",
+          "target": "DEMO_ADSO_22",
+          "type": "dependency"
+        },
+        {
+          "id": "link-035",
+          "source": "DEMO_ADSO_24",
+          "target": "DEMO_TRCS_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-036",
+          "source": "DEMO_ADSO_25",
+          "target": "DEMO_TRCS_05",
+          "type": "dependency"
+        },
+        {
+          "id": "link-037",
+          "source": "DEMO_ADSO_27",
+          "target": "DEMO_TRCS_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-038",
+          "source": "DEMO_ADSO_29",
+          "target": "DEMO_ADSO_30",
+          "type": "dependency"
+        },
+        {
+          "id": "link-039",
+          "source": "DEMO_ADSO_17",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-040",
+          "source": "DEMO_TRCS_01",
+          "target": "DEMO_ADSO_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-041",
+          "source": "DEMO_TRCS_02",
+          "target": "DEMO_ADSO_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-042",
+          "source": "DEMO_ADSO_09",
+          "target": "DEMO_ADSO_10",
+          "type": "dependency"
+        },
+        {
+          "id": "link-043",
+          "source": "DEMO_ADSO_12",
+          "target": "DEMO_ADSO_13",
+          "type": "dependency"
+        },
+        {
+          "id": "link-044",
+          "source": "DEMO_TRCS_03",
+          "target": "DEMO_ADSO_18",
+          "type": "dependency"
+        },
+        {
+          "id": "link-045",
+          "source": "DEMO_ADSO_20",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-046",
+          "source": "DEMO_ADSO_22",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-047",
+          "source": "DEMO_TRCS_04",
+          "target": "DEMO_ADSO_26",
+          "type": "dependency"
+        },
+        {
+          "id": "link-048",
+          "source": "DEMO_TRCS_05",
+          "target": "DEMO_ADSO_14",
+          "type": "dependency"
+        },
+        {
+          "id": "link-049",
+          "source": "DEMO_TRCS_05",
+          "target": "DEMO_ADSO_26",
+          "type": "dependency"
+        },
+        {
+          "id": "link-050",
+          "source": "DEMO_TRCS_06",
+          "target": "DEMO_ADSO_28",
+          "type": "dependency"
+        },
+        {
+          "id": "link-051",
+          "source": "DEMO_ADSO_30",
+          "target": "DEMO_ADSO_31",
+          "type": "dependency"
+        },
+        {
+          "id": "link-053",
+          "source": "DEMO_ADSO_02",
+          "target": "DEMO_HCPR_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-054",
+          "source": "DEMO_ADSO_04",
+          "target": "DEMO_ADSO_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-055",
+          "source": "DEMO_ADSO_04",
+          "target": "DEMO_HCPR_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-056",
+          "source": "DEMO_ADSO_10",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-057",
+          "source": "DEMO_ADSO_13",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-058",
+          "source": "DEMO_ADSO_18",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-059",
+          "source": "DEMO_ADSO_26",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-060",
+          "source": "DEMO_ADSO_14",
+          "target": "DEMO_ADSO_15",
+          "type": "dependency"
+        },
+        {
+          "id": "link-061",
+          "source": "DEMO_ADSO_28",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-062",
+          "source": "DEMO_ADSO_31",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-063",
+          "source": "DEMO_HCPR_01",
+          "target": "DEMO_BEXQ_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-064",
+          "source": "DEMO_HCPR_01",
+          "target": "DEMO_BEXQ_03",
+          "type": "dependency"
+        },
+        {
+          "id": "new-feed",
+          "source": "DEMO_ADSO_01",
+          "target": "DEMO_ADSO_NEW",
+          "type": "dependency"
+        },
+        {
+          "id": "new-report",
+          "source": "DEMO_ADSO_NEW",
+          "target": "DEMO_QUERY_NEW",
+          "type": "dependency"
+        }
+      ]
+    },
+    {
+      "id": "snapshot-6",
+      "capturedAt": "2026-06-01T00:00:00Z",
+      "scope": "demo-landscape",
+      "complete": true,
+      "label": "Смена источника витрины",
+      "nodes": [
+        {
+          "id": "DEMO_SYST_01",
+          "label": "Система 01",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_SYST_02",
+          "label": "Система 02",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_SYST_03",
+          "label": "Система 03",
+          "description": "Демонстрационный объект · система",
+          "type": "SYST",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_01",
+          "label": "Источник 01",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_02",
+          "label": "Источник 02",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_01",
+          "label": "Хранилище 01",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_01",
+          "label": "Инфо-источник 01",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_02",
+          "label": "Инфо-источник 02",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_02",
+          "label": "Хранилище 02",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_03",
+          "label": "Источник 03",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_03",
+          "label": "Хранилище 03",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_04",
+          "label": "Хранилище 04",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_05",
+          "label": "Хранилище 05",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_04",
+          "label": "Источник 04",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_06",
+          "label": "Хранилище 06",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_HCPR_01",
+          "label": "Провайдер 01",
+          "description": "Демонстрационный объект · провайдер",
+          "type": "HCPR",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_07",
+          "label": "Хранилище 07",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_05",
+          "label": "Источник 05",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_08",
+          "label": "Хранилище 08",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_09",
+          "label": "Хранилище 09",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_10",
+          "label": "Хранилище 10",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_06",
+          "label": "Источник 06",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_11",
+          "label": "Хранилище 11",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_12",
+          "label": "Хранилище 12",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_13",
+          "label": "Хранилище 13",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_14",
+          "label": "Хранилище 14",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_15",
+          "label": "Хранилище 15",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_07",
+          "label": "Источник 07",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_16",
+          "label": "Хранилище 16",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_03",
+          "label": "Инфо-источник 03",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_17",
+          "label": "Хранилище 17",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_18",
+          "label": "Хранилище 18",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_08",
+          "label": "Источник 08",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_19",
+          "label": "Хранилище 19",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_20",
+          "label": "Хранилище 20",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_09",
+          "label": "Источник 09",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_21",
+          "label": "Хранилище 21",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_22",
+          "label": "Хранилище 22",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_23",
+          "label": "Хранилище 23",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_10",
+          "label": "Источник 10",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_24",
+          "label": "Хранилище 24",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_04",
+          "label": "Инфо-источник 04",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_11",
+          "label": "Источник 11",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_25",
+          "label": "Хранилище 25",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_05",
+          "label": "Инфо-источник 05",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_26",
+          "label": "Хранилище 26",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_12",
+          "label": "Источник 12",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_27",
+          "label": "Хранилище 27",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_28",
+          "label": "Хранилище 28",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_RSDS_13",
+          "label": "Источник 13",
+          "description": "Демонстрационный объект · источник",
+          "type": "RSDS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_29",
+          "label": "Хранилище 29",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_30",
+          "label": "Хранилище 30",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_31",
+          "label": "Хранилище 31",
+          "description": "Демонстрационный объект · хранилище",
+          "type": "ADSO",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_HCPR_02",
+          "label": "Провайдер 02",
+          "description": "Демонстрационный объект · провайдер",
+          "type": "HCPR",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_TRCS_06",
+          "label": "Инфо-источник 06",
+          "description": "Демонстрационный объект · инфо-источник",
+          "type": "TRCS",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_02",
+          "label": "Отчёт 02",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_03",
+          "label": "Отчёт 03",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_BEXQ_04",
+          "label": "Отчёт 04",
+          "description": "Демонстрационный объект · отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Область": "Учебный ландшафт",
+            "Версия": "1"
+          }
+        },
+        {
+          "id": "DEMO_ADSO_NEW",
+          "label": "Витрина продаж",
+          "description": "Добавлена региональная детализация",
+          "type": "ADSO",
+          "attributes": {
+            "Версия": "2",
+            "Гранулярность": "Регион / месяц"
+          }
+        },
+        {
+          "id": "DEMO_QUERY_NEW",
+          "label": "Продажи по регионам",
+          "description": "Новый аналитический отчёт",
+          "type": "BEXQ",
+          "attributes": {
+            "Версия": "1"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "link-000",
+          "source": "DEMO_SYST_03",
+          "target": "DEMO_RSDS_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-001",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-002",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-003",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-004",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_05",
+          "type": "dependency"
+        },
+        {
+          "id": "link-005",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-006",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-007",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_08",
+          "type": "dependency"
+        },
+        {
+          "id": "link-008",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_09",
+          "type": "dependency"
+        },
+        {
+          "id": "link-009",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_10",
+          "type": "dependency"
+        },
+        {
+          "id": "link-010",
+          "source": "DEMO_SYST_02",
+          "target": "DEMO_RSDS_11",
+          "type": "dependency"
+        },
+        {
+          "id": "link-011",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_12",
+          "type": "dependency"
+        },
+        {
+          "id": "link-012",
+          "source": "DEMO_SYST_01",
+          "target": "DEMO_RSDS_13",
+          "type": "dependency"
+        },
+        {
+          "id": "link-013",
+          "source": "DEMO_RSDS_01",
+          "target": "DEMO_ADSO_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-014",
+          "source": "DEMO_RSDS_02",
+          "target": "DEMO_ADSO_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-015",
+          "source": "DEMO_RSDS_03",
+          "target": "DEMO_ADSO_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-016",
+          "source": "DEMO_RSDS_04",
+          "target": "DEMO_ADSO_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-017",
+          "source": "DEMO_RSDS_05",
+          "target": "DEMO_ADSO_08",
+          "type": "dependency"
+        },
+        {
+          "id": "link-018",
+          "source": "DEMO_RSDS_06",
+          "target": "DEMO_ADSO_11",
+          "type": "dependency"
+        },
+        {
+          "id": "link-019",
+          "source": "DEMO_RSDS_07",
+          "target": "DEMO_ADSO_16",
+          "type": "dependency"
+        },
+        {
+          "id": "link-020",
+          "source": "DEMO_RSDS_08",
+          "target": "DEMO_ADSO_19",
+          "type": "dependency"
+        },
+        {
+          "id": "link-021",
+          "source": "DEMO_RSDS_09",
+          "target": "DEMO_ADSO_21",
+          "type": "dependency"
+        },
+        {
+          "id": "link-022",
+          "source": "DEMO_RSDS_10",
+          "target": "DEMO_ADSO_24",
+          "type": "dependency"
+        },
+        {
+          "id": "link-023",
+          "source": "DEMO_RSDS_11",
+          "target": "DEMO_ADSO_25",
+          "type": "dependency"
+        },
+        {
+          "id": "link-024",
+          "source": "DEMO_RSDS_12",
+          "target": "DEMO_ADSO_27",
+          "type": "dependency"
+        },
+        {
+          "id": "link-025",
+          "source": "DEMO_RSDS_13",
+          "target": "DEMO_ADSO_29",
+          "type": "dependency"
+        },
+        {
+          "id": "link-026",
+          "source": "DEMO_ADSO_07",
+          "target": "DEMO_ADSO_17",
+          "type": "dependency"
+        },
+        {
+          "id": "link-027",
+          "source": "DEMO_ADSO_01",
+          "target": "DEMO_TRCS_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-028",
+          "source": "DEMO_ADSO_03",
+          "target": "DEMO_TRCS_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-029",
+          "source": "DEMO_ADSO_06",
+          "target": "DEMO_ADSO_07",
+          "type": "dependency"
+        },
+        {
+          "id": "link-030",
+          "source": "DEMO_ADSO_08",
+          "target": "DEMO_ADSO_09",
+          "type": "dependency"
+        },
+        {
+          "id": "link-031",
+          "source": "DEMO_ADSO_11",
+          "target": "DEMO_ADSO_12",
+          "type": "dependency"
+        },
+        {
+          "id": "link-032",
+          "source": "DEMO_ADSO_16",
+          "target": "DEMO_TRCS_03",
+          "type": "dependency"
+        },
+        {
+          "id": "link-033",
+          "source": "DEMO_ADSO_19",
+          "target": "DEMO_ADSO_20",
+          "type": "dependency"
+        },
+        {
+          "id": "link-034",
+          "source": "DEMO_ADSO_21",
+          "target": "DEMO_ADSO_22",
+          "type": "dependency"
+        },
+        {
+          "id": "link-035",
+          "source": "DEMO_ADSO_24",
+          "target": "DEMO_TRCS_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-036",
+          "source": "DEMO_ADSO_25",
+          "target": "DEMO_TRCS_05",
+          "type": "dependency"
+        },
+        {
+          "id": "link-037",
+          "source": "DEMO_ADSO_27",
+          "target": "DEMO_TRCS_06",
+          "type": "dependency"
+        },
+        {
+          "id": "link-038",
+          "source": "DEMO_ADSO_29",
+          "target": "DEMO_ADSO_30",
+          "type": "dependency"
+        },
+        {
+          "id": "link-039",
+          "source": "DEMO_ADSO_17",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-040",
+          "source": "DEMO_TRCS_01",
+          "target": "DEMO_ADSO_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-041",
+          "source": "DEMO_TRCS_02",
+          "target": "DEMO_ADSO_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-042",
+          "source": "DEMO_ADSO_09",
+          "target": "DEMO_ADSO_10",
+          "type": "dependency"
+        },
+        {
+          "id": "link-043",
+          "source": "DEMO_ADSO_12",
+          "target": "DEMO_ADSO_13",
+          "type": "dependency"
+        },
+        {
+          "id": "link-044",
+          "source": "DEMO_TRCS_03",
+          "target": "DEMO_ADSO_18",
+          "type": "dependency"
+        },
+        {
+          "id": "link-045",
+          "source": "DEMO_ADSO_20",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-046",
+          "source": "DEMO_ADSO_22",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-047",
+          "source": "DEMO_TRCS_04",
+          "target": "DEMO_ADSO_26",
+          "type": "dependency"
+        },
+        {
+          "id": "link-048",
+          "source": "DEMO_TRCS_05",
+          "target": "DEMO_ADSO_14",
+          "type": "dependency"
+        },
+        {
+          "id": "link-049",
+          "source": "DEMO_TRCS_05",
+          "target": "DEMO_ADSO_26",
+          "type": "dependency"
+        },
+        {
+          "id": "link-050",
+          "source": "DEMO_TRCS_06",
+          "target": "DEMO_ADSO_28",
+          "type": "dependency"
+        },
+        {
+          "id": "link-051",
+          "source": "DEMO_ADSO_30",
+          "target": "DEMO_ADSO_31",
+          "type": "dependency"
+        },
+        {
+          "id": "link-053",
+          "source": "DEMO_ADSO_02",
+          "target": "DEMO_HCPR_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-054",
+          "source": "DEMO_ADSO_04",
+          "target": "DEMO_ADSO_04",
+          "type": "dependency"
+        },
+        {
+          "id": "link-055",
+          "source": "DEMO_ADSO_04",
+          "target": "DEMO_HCPR_01",
+          "type": "dependency"
+        },
+        {
+          "id": "link-056",
+          "source": "DEMO_ADSO_10",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-057",
+          "source": "DEMO_ADSO_13",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-058",
+          "source": "DEMO_ADSO_18",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-059",
+          "source": "DEMO_ADSO_26",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-060",
+          "source": "DEMO_ADSO_14",
+          "target": "DEMO_ADSO_15",
+          "type": "dependency"
+        },
+        {
+          "id": "link-061",
+          "source": "DEMO_ADSO_28",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-062",
+          "source": "DEMO_ADSO_31",
+          "target": "DEMO_HCPR_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-063",
+          "source": "DEMO_HCPR_01",
+          "target": "DEMO_BEXQ_02",
+          "type": "dependency"
+        },
+        {
+          "id": "link-064",
+          "source": "DEMO_HCPR_01",
+          "target": "DEMO_BEXQ_03",
+          "type": "dependency"
+        },
+        {
+          "id": "new-report",
+          "source": "DEMO_ADSO_NEW",
+          "target": "DEMO_QUERY_NEW",
+          "type": "dependency"
+        },
+        {
+          "id": "new-feed-v2",
+          "source": "DEMO_ADSO_02",
+          "target": "DEMO_ADSO_NEW",
+          "type": "dependency"
+        }
+      ]
+    }
+  ]
+}
