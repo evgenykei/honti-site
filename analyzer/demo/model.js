@@ -34,8 +34,44 @@ export function reach(nodes,edges,start,direction='both'){
 export function visible(snapshot,{types,query='',focus=null,direction='both'}){
   const related=focus?reach(snapshot.nodes,snapshot.edges,focus,direction):null;
   const q=query.trim().toLocaleLowerCase('ru');
-  const nodes=snapshot.nodes.filter(n=>(!types||types.has(n.type))&&(!related||related.has(n.id))&&(!q||[n.id,n.label,n.description||''].join(' ').toLocaleLowerCase('ru').includes(q)));
-  const ids=new Set(nodes.map(n=>n.id));return {nodes,edges:snapshot.edges.filter(e=>ids.has(e.source)&&ids.has(e.target))};
+  // Focus limits the universe first. Filtering contracts skipped objects into
+  // directed links between the nearest retained objects on each reachable path.
+  const scopedNodes=snapshot.nodes.filter(n=>!related||related.has(n.id));
+  const scope=new Set(scopedNodes.map(n=>n.id));
+  const scopedEdges=snapshot.edges.filter(e=>scope.has(e.source)&&scope.has(e.target));
+  const nodes=scopedNodes.filter(n=>!types||types.has(n.type));
+  const kept=new Set(nodes.map(n=>n.id));
+  if(!nodes.length)return {nodes,edges:[],matched:kept};
+  const outgoing=new Map();
+  for(const e of scopedEdges){if(!outgoing.has(e.source))outgoing.set(e.source,[]);outgoing.get(e.source).push(e);}
+  const edges=scopedEdges.filter(e=>kept.has(e.source)&&kept.has(e.target));
+  const usedIds=new Set(scopedEdges.map(e=>e.id)),collapsed=new Set();
+  for(const source of kept){
+    const queue=[],seen=new Set();
+    for(const e of outgoing.get(source)||[])if(!kept.has(e.target)&&!seen.has(e.target)){
+      seen.add(e.target);queue.push({id:e.target,via:[e.target],sourceEdges:[e.id]});
+    }
+    for(let i=0;i<queue.length;i++){
+      const step=queue[i];
+      for(const e of outgoing.get(step.id)||[]){
+        if(kept.has(e.target)){
+          const pair=JSON.stringify([source,e.target]);if(collapsed.has(pair))continue;collapsed.add(pair);
+          let id='flow:'+pair;while(usedIds.has(id))id+=':';usedIds.add(id);
+          edges.push({id,source,target:e.target,type:'flow',collapsed:true,via:step.via,sourceEdges:[...step.sourceEdges,e.id]});
+        }else if(!seen.has(e.target)){
+          seen.add(e.target);queue.push({id:e.target,via:[...step.via,e.target],sourceEdges:[...step.sourceEdges,e.id]});
+        }
+      }
+    }
+  }
+  if(!q)return {nodes,edges,matched:kept};
+  // Search keeps complete flows of matching objects after type contraction.
+  // Nonmatching retained objects are displayed as junctions, not full cards.
+  const matched=new Set(nodes.filter(n=>[n.id,n.label,n.description||''].join(' ').toLocaleLowerCase('ru').includes(q)).map(n=>n.id));
+  const adjacent=new Map();for(const e of edges){if(!adjacent.has(e.source))adjacent.set(e.source,[]);if(!adjacent.has(e.target))adjacent.set(e.target,[]);adjacent.get(e.source).push(e.target);adjacent.get(e.target).push(e.source);}
+  const included=new Set(matched),queue=[...matched];
+  for(let i=0;i<queue.length;i++)for(const id of adjacent.get(queue[i])||[])if(!included.has(id)){included.add(id);queue.push(id);}
+  return {nodes:nodes.filter(n=>included.has(n.id)),edges:edges.filter(e=>included.has(e.source)&&included.has(e.target)),matched};
 }
 export function legacy(groups,nodes,lines){
   if(![groups,nodes,lines].every(Array.isArray))throw Error('Groups, Nodes и Lines должны быть массивами.');
