@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "sourceRepository": "https://github.com/evgenykei/bw-relation-flow",
+  "sourceCommit": "319cbe3fb6c5bb380ceece10356f90d0ac86d05b",
+  "files": [
+    {
+      "path": "analyzer/demo/README.md",
+      "bytes": 9985,
+      "sha256": "4302bd1284aaf0e689a3e51a0aee1af4f354e134a14f1be4fd0792ba38ae31d4"
+    },
+    {
+      "path": "analyzer/demo/app.css",
+      "bytes": 7315,
+      "sha256": "b253577cee73c23821dcad2d4bc2fec0f9a8ebbbc885d985d6bd3b81e671a9c0"
+    },
+    {
+      "path": "analyzer/demo/app.js",
+      "bytes": 20586,
+      "sha256": "10483459fe6c805f5d66667ce0bf4499a38b6d83d7ea2685de46f3dea67e3347"
+    },
+    {
+      "path": "analyzer/demo/demo.json",
+      "bytes": 189350,
+      "sha256": "80329951f331f424364d83b0830bda31798bc459d5afe80e90870cec2f85f0ad"
+    },
+    {
+      "path": "analyzer/demo/index.html",
+      "bytes": 6349,
+      "sha256": "5fb4f56500d6aa3692aeff018d01893d1218ed72b9d5a2066b744790ea0a1de2"
+    },
+    {
+      "path": "analyzer/demo/model.js",
+      "bytes": 7444,
+      "sha256": "cf764e1da99d62b32553cc1dd87a56276b7706ee15ba014254edcc8b7fc2192c"
+    },
+    {
+      "path": "analyzer/demo/scenarios.js",
+      "bytes": 1196,
+      "sha256": "14a5ae182e832d85439ee6932cbd1e658dde15cff3a1898ccfdf29e60446e120"
+    },
+    {
+      "path": "analyzer/demo/vendor/ELK-LICENSE.txt",
+      "bytes": 14480,
+      "sha256": "89591d4578fb1ebd91501312a3d25f021bd865a2e436641c1cf7b1bc7e3c1617"
+    },
+    {
+      "path": "analyzer/demo/vendor/cytoscape.min.js",
+      "bytes": 434037,
+      "sha256": "f55947f3daa3bae53209d4b885c195c157f595c225e508a6b382598d9452d6e2"
+    },
+    {
+      "path": "analyzer/demo/vendor/elk.bundled.js",
+      "bytes": 1585569,
+      "sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf"
+    }
+  ]
+}
