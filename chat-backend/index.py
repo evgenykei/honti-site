@@ -7,11 +7,12 @@ import os
 import ssl
 from urllib.request import Request, urlopen
 from core import Chat, Reject
+from settings import value
 
 _chat = None
 
 def configured():
-    return [c for c in ('TELEGRAM','MAX') if all(os.environ.get(c+'_'+k) for k in ('TOKEN','OWNER_ID','WEBHOOK_SECRET'))]
+    return [c for c in ('TELEGRAM','MAX') if all(value(c,k) for k in ('TOKEN','OWNER_ID','WEBHOOK_SECRET'))]
 
 def request_json(url, body, headers=None):
     # TLS verification stays enabled. For MAX an optional approved CA bundle can be supplied.
@@ -21,7 +22,7 @@ def request_json(url, body, headers=None):
     with urlopen(request,timeout=6,context=context) as response:return json.load(response)
 
 def notify(channel,sid,text):
-    prefix=channel.upper();owner=os.environ[prefix+'_OWNER_ID'];token=os.environ[prefix+'_TOKEN']
+    prefix=channel.upper();owner=value(channel,'OWNER_ID');token=value(channel,'TOKEN')
     text='Чат сайта ХОНТИ\n'+text+'\n\nОтветьте на это сообщение или отправьте:\n/reply '+sid+' ваш ответ'
     if channel=='telegram':
         body=request_json('https://api.telegram.org/bot'+token+'/sendMessage',{'chat_id':int(owner),'text':text,'disable_web_page_preview':True})
@@ -38,7 +39,7 @@ def get_chat():
     return _chat
 
 def operator_event(channel,body,chat):
-    owner=os.environ[channel.upper()+'_OWNER_ID']
+    owner=value(channel,'OWNER_ID')
     if channel=='telegram':
         message=body.get('message') or {}
         # Only the owner's private dialog, not a group with an authorized sender.
@@ -69,7 +70,7 @@ def handler(event, context):
         if action in ('telegram','max'):
             prefix=action.upper()
             header='x-telegram-bot-api-secret-token' if action=='telegram' else 'x-max-bot-api-secret'
-            secret=os.environ.get(prefix+'_WEBHOOK_SECRET','')
+            secret=value(action,'WEBHOOK_SECRET') or ''
             if prefix not in channels or not secret or not hmac.compare_digest(str(headers.get(header,'')),secret):return result(403,{'error':'Webhook rejected'})
         elif origin!=allowed:return result(403,{'error':'Origin rejected'})
         raw=event.get('body') or ''

@@ -8,7 +8,9 @@
 
 ## Текущее состояние
 
-Код подготовлен; облачные ресурсы, реальные токены и Webhook ещё не подключены.
+Cloud Function и YDB развёрнуты. MAX operator ID и Webhook настроены;
+живая доставка и обратный ответ проверяются перед публикацией. Telegram пока
+не включён: соединение с его API из функции завершается таймаутом.
 `assets/chat-config.js` содержит пустой API URL: до завершения настройки виджет
 показывает реальные контакты и не имитирует отправку сообщений.
 
@@ -18,7 +20,7 @@
 2. Создать отдельный сервисный аккаунт. Дать ему `ydb.editor` только на эту базу,
    назначить аккаунт функции. Постоянный ключ аккаунта не нужен: SDK использует
    metadata credentials. Установить ограничения потребления YDB и бюджетные уведомления.
-3. Архивировать файлы `core.py`, `index.py`, `storage.py`, `requirements.txt` в корне ZIP.
+3. Архивировать файлы `core.py`, `index.py`, `storage.py`, `settings.py`, `requirements.txt` в корне ZIP.
    Создать Cloud Function Python 3.12, `index.handler`, 128 МБ, таймаут 30 секунд,
    не более одного экземпляра на начальном запуске. Не включать логирование тела
    HTTP-запросов. Для публичного вызова нужна роль `functions.functionInvoker`
@@ -45,7 +47,7 @@
    `assets/chat-config.js`. Проверить HTTPS, CORS, оба канала, ответы двум
    независимым посетителям, повторную отправку и обновление страницы.
 8. Публиковать через PR. Не включать виджет с рабочим endpoint до проверки
-   обоих операторских ID и секретов Webhook.
+   операторского ID и секрета Webhook каждого включённого канала.
 
 ## Хранение и ограничения
 
@@ -81,3 +83,14 @@
 - https://dev.max.ru/docs-api/methods/POST/messages
 - https://dev.max.ru/docs-api/methods/POST/subscriptions
 - https://yandex.cloud/ru/docs/tutorials/serverless/serverless-url-shortener/console
+
+
+Operator routing can alternatively be provisioned server-side in the private YDB row
+`config:operator-routing`, with channel keys `max` / `telegram` and fields
+`OWNER_ID`, `WEBHOOK_SECRET`. Tokens remain exclusively in function environment
+variables. Environment values take precedence. The row has a long explicit TTL
+(until 2100); it is not session data. Do not export its payload to browser clients,
+logs, or a repository. Provisioning must run behind IAM, and production archives
+must omit the temporary provisioning helper. Only `index.handler` is public.
+An unavailable channel is left unconfigured, so a MAX-only deployment does not
+wait on Telegram.

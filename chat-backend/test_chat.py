@@ -2,6 +2,8 @@ import copy
 import json
 import os
 import unittest
+import types
+import settings
 from unittest.mock import patch
 from core import Chat, Reject
 import index
@@ -85,5 +87,18 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(index.handler(self.event('session'),None)['statusCode'],403)
         e=self.event('session',headers={'Origin':'https://honti-it.ru'});e['httpMethod']='OPTIONS'
         self.assertEqual(index.handler(e,None)['statusCode'],204)
+
+class SettingsTests(unittest.TestCase):
+    def test_database_config_keeps_tokens_in_environment(self):
+        store=Memory();store.rows['config:operator-routing']={'max':{'OWNER_ID':'42','WEBHOOK_SECRET':'server-secret'}}
+        with patch.dict(os.environ,{'YDB_ENDPOINT':'test','MAX_TOKEN':'env-token'},clear=True), patch.object(settings,'_cached',None), patch.dict('sys.modules',{'storage':types.SimpleNamespace(Store=lambda:store)}):
+            self.assertEqual(settings.value('max','OWNER_ID'),'42')
+            self.assertEqual(settings.value('max','WEBHOOK_SECRET'),'server-secret')
+            self.assertEqual(settings.value('max','TOKEN'),'env-token')
+            self.assertIsNone(settings.value('telegram','OWNER_ID'))
+            self.assertEqual(index.configured(),['MAX'])
+    def test_missing_or_expired_config_disables_channel(self):
+        with patch.dict(os.environ,{'YDB_ENDPOINT':'test','MAX_TOKEN':'env-token'},clear=True), patch.object(settings,'_cached',None), patch.dict('sys.modules',{'storage':types.SimpleNamespace(Store=Memory)}):
+            self.assertEqual(index.configured(),[])
 
 if __name__=='__main__':unittest.main()
