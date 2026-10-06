@@ -48,7 +48,10 @@ def operator_event(channel,body,chat):
         chat.reply(channel,body.get('update_id'),message.get('text'),parent)
     elif body.get('update_type')=='message_created':
         message=body.get('message') or {}
-        if str((message.get('sender') or {}).get('user_id'))!=owner:return
+        owner_ok=str((message.get('sender') or {}).get('user_id'))==owner
+        private_ok=(message.get('recipient') or {}).get('chat_type')=='dialog'
+        print(json.dumps({'stage':'max_operator','owner_ok':owner_ok,'private_ok':private_ok,'has_reply':(message.get('link') or {}).get('type')=='reply'}))
+        if not owner_ok:return
         # MAX private-dialog recipient has chat_type=dialog.
         if (message.get('recipient') or {}).get('chat_type')!='dialog':return
         link=message.get('link') or {}
@@ -61,7 +64,10 @@ def handler(event, context):
     origin=headers.get('origin','');allowed=os.environ.get('CHAT_ORIGIN','https://honti-it.ru')
     response_headers={'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','Vary':'Origin'}
     if origin==allowed:response_headers.update({'Access-Control-Allow-Origin':allowed,'Access-Control-Allow-Headers':'Content-Type','Access-Control-Allow-Methods':'POST, OPTIONS'})
-    def result(code,body):return {'statusCode':code,'headers':response_headers,'body':json.dumps(body,ensure_ascii=False)}
+    def result(code,body):
+        # Operational metadata only: no headers, tokens, IDs or message text.
+        print(json.dumps({'stage':'http','status':code}))
+        return {'statusCode':code,'headers':response_headers,'body':json.dumps(body,ensure_ascii=False)}
     try:
         method=event.get('httpMethod');action=(event.get('queryStringParameters') or {}).get('action','')
         if method=='OPTIONS':return result(204,{}) if origin==allowed else result(403,{'error':'Origin rejected'})
@@ -92,6 +98,7 @@ def handler(event, context):
         return result(404,{'error':'Unknown action'})
     except Reject as error:return result(error.code,{'error':error.text})
     except (ValueError,TypeError,UnicodeError):return result(400,{'error':'Некорректный запрос'})
-    except Exception:
+    except Exception as error:
+        print(json.dumps({'stage':'failure','type':type(error).__name__}))
         # Do not log request bodies, credentials or outbound exception URLs.
         return result(503,{'error':'Связь временно недоступна. Напишите на info@honti-it.ru.'})
