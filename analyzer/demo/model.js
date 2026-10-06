@@ -1,13 +1,13 @@
 /* HONTI Analyzer: domain model, independent of renderer and data source. */
 export function validate(project) {
   if(project.schemaVersion!==1 || !Array.isArray(project.snapshots) || !project.snapshots.length) throw Error('Ожидается schemaVersion: 1 и непустой массив snapshots.');
-  if(project.snapshots.length>100) throw Error('Для прототипа допускается до 100 снимков.');
+  if(project.snapshots.length>100) throw Error('Допускается до 100 снимков.');
   const snapshotIds=new Set(), kinds=new Map(); let last=-Infinity;
   for(const s of project.snapshots){
     if(!s.id||snapshotIds.has(s.id)) throw Error('Идентификаторы снимков должны быть уникальными.'); snapshotIds.add(s.id);
     const date=Date.parse(s.capturedAt); if(!Number.isFinite(date)||date<=last) throw Error('Снимки должны идти по возрастанию даты.');last=date;
     if(!Array.isArray(s.nodes)||!Array.isArray(s.edges)) throw Error('В снимке нужны nodes и edges.');
-    if(s.nodes.length>3000||s.edges.length>10000) throw Error('Лимит прототипа: 3000 объектов и 10000 связей на снимок.');
+    if(s.nodes.length>3000||s.edges.length>10000) throw Error('Лимит приложения: 3000 объектов и 10000 связей на снимок.');
     const ids=new Set();
     for(const n of s.nodes){if(typeof n.id!=='string'||!n.id||ids.has(n.id)||typeof n.label!=='string'||typeof n.type!=='string')throw Error('Неверный или повторный ключ объекта.');if(kinds.has(n.id)&&kinds.get(n.id)!=="node")throw Error("Ключ используется и объектом, и связью.");kinds.set(n.id,"node");ids.add(n.id);}
     const edges=new Set();for(const e of s.edges){if(typeof e.id!=='string'||!e.id||edges.has(e.id)||ids.has(e.id)||!ids.has(e.source)||!ids.has(e.target))throw Error('Неверный ключ связи или ссылка на отсутствующий объект.');if(kinds.has(e.id)&&kinds.get(e.id)!=="edge")throw Error("Ключ используется и объектом, и связью.");kinds.set(e.id,"edge");edges.add(e.id);}
