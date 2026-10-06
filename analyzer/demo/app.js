@@ -115,7 +115,7 @@ async function load(p,demoData=false){
  if(loading)throw Error('Дождитесь завершения текущей загрузки.');validate(p);stop();scenario=null;clearTimeout(reflowTimer);reflowVersion++;loading=true;$('import').disabled=true;$('demo').disabled=true;$('play').disabled=true;if(project)scenarioInfo();else{$('impactScenario').disabled=true;$('historyScenario').disabled=true;}message('Рассчитываю расположение объектов…');
  // Layout the union once: unchanged nodes keep their positions across snapshots.
  const ns=new Map(),es=new Map();for(const s of p.snapshots){for(const n of s.nodes)ns.set(n.id,n);for(const e of s.edges)es.set(e.id,e);}
- if(ns.size>3000||es.size>10000){loading=false;throw Error('Объединённый граф превышает лимит прототипа.');}
+ if(ns.size>3000||es.size>10000){loading=false;throw Error('Объединённый граф превышает лимит приложения.');}
  const layout=await new ELK().layout({id:'root',layoutOptions:{'elk.algorithm':'layered','elk.direction':'RIGHT','elk.spacing.nodeNode':'35','elk.layered.spacing.nodeNodeBetweenLayers':'65'},children:[...ns.values()].map(n=>({id:n.id,width:145,height:62})),edges:[...es.values()].filter(e=>e.source!==e.target).map(e=>({id:e.id,sources:[e.source],targets:[e.target]}))});
  project=p;isDemo=demoData;positions=Object.fromEntries((layout.children||[]).map(n=>[n.id,{x:n.x+72.5,y:n.y+31}]));basePositions={...positions};index=0;selected=null;focus=null;types=new Set([...ns.values()].map(n=>n.type));$('search').value='';$('time').max=p.snapshots.length-1;$('time').disabled=p.snapshots.length===1;$('ghosts').checked=true;
  $('dataset').textContent=p.synthetic?'Демонстрационные данные и вымышленная история · без подключения к SAP':'Локальные данные · обрабатываются только в этом браузере';
