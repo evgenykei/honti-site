@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="HONTI 3-Gate is an integration runtime for SAP and enterprise sources, with incremental loading, schema evolution, retries and checkpoints." />
+  <title>HONTI 3-Gate — Integration Platform</title>
+  <style>
+    :root{--bg:#f6f6f3;--text:#111214;--muted:#6f747a;--line:#d9dbdd;--card:#fff;--max:1180px;--dark:#111214}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+    a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+    header{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);background:rgba(246,246,243,.86);border-bottom:1px solid rgba(17,18,20,.08)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:20px;font-weight:800;letter-spacing:.12em}.brand span{color:var(--muted);font-weight:600;letter-spacing:0}
+    .navlinks{display:flex;gap:28px;font-size:14px;color:var(--muted)}.navlinks a:hover{color:var(--text)}
+    .hero{padding:110px 0 78px}.eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+    h1{margin:0;max-width:1050px;font-size:clamp(52px,8.6vw,112px);line-height:.91;letter-spacing:-.06em;font-weight:760}
+    .lead{margin:30px 0 0;max-width:830px;font-size:clamp(19px,2vw,27px);line-height:1.35;color:#3f4449}
+    .actions{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:999px;border:1px solid var(--text);font-size:14px;font-weight:650}
+    .btn.primary{background:var(--text);color:#fff}.btn.secondary{background:transparent}
+    section{padding:90px 0;border-top:1px solid var(--line)}.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:30px}
+    .display{max-width:1000px;margin:0;font-size:clamp(34px,5vw,70px);line-height:1.02;letter-spacing:-.045em}
+    .sub{max-width:760px;margin:26px 0 0;color:var(--muted);font-size:18px}
+    .arch{margin-top:46px;background:var(--dark);color:#fff;border-radius:28px;padding:38px;display:grid;grid-template-columns:1fr auto 1.15fr auto 1fr;gap:24px;align-items:center}
+    .arch-box{border:1px solid #34373a;border-radius:18px;padding:24px;min-height:150px}.arch-box strong{display:block;font-size:22px;margin-bottom:16px}.arch-box p{margin:0;color:#aeb3b8;font-size:15px}.arrow{color:#777d82;font-size:30px}
+    .grid{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#fff;border:1px solid #e5e6e7;border-radius:22px;padding:28px;min-height:225px}
+    .card .num{font-size:12px;color:var(--muted);letter-spacing:.12em;margin-bottom:36px}.card h3{margin:0 0 14px;font-size:26px;letter-spacing:-.025em}.card p{margin:0;color:var(--muted);font-size:16px}
+    .split{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}.feature-list{border-top:1px solid var(--line)}.feature{padding:23px 0;border-bottom:1px solid var(--line)}
+    .feature strong{display:block;font-size:21px;margin-bottom:6px}.feature p{margin:0;color:var(--muted)}
+    .flow-box{background:#fff;border:1px solid #e5e6e7;border-radius:24px;padding:32px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:15px;line-height:1.85;white-space:pre-wrap}
+    .status{display:inline-flex;padding:7px 10px;border-radius:999px;background:#111214;color:#fff;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
+    .cta{padding:112px 0}.cta-box{background:#111214;color:#fff;border-radius:30px;padding:54px}.cta-box .kicker{color:#989da3}.cta-title{margin:0;max-width:880px;font-size:clamp(40px,6vw,80px);line-height:.98;letter-spacing:-.05em}.cta-sub{margin:24px 0 0;color:#afb4b9;max-width:680px;font-size:18px}.cta .btn{border-color:#fff}.cta .btn.primary{background:#fff;color:#111214}
+    footer{padding:28px 0 38px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:900px){.navlinks{display:none}.arch{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center}.grid{grid-template-columns:1fr}.split{grid-template-columns:1fr}.hero{padding-top:80px}}
+  </style>
+<link rel="canonical" href="https://honti-it.ru/en/3-gate/" />
+<link rel="alternate" hreflang="ru" href="https://honti-it.ru/3-gate/" />
+<link rel="alternate" hreflang="en" href="https://honti-it.ru/en/3-gate/" />
+<link rel="alternate" hreflang="x-default" href="https://honti-it.ru/3-gate/" />
+<link rel="stylesheet" href="/assets/languages.css" />
+</head>
+<body>
+<header><div class="wrap"><nav><a class="brand" href="/en/">HONTI <span>/ 3-Gate</span></a><div class="navlinks"><a href="#product">Product</a><a href="#flow">Within Flow</a><a href="/en/#contact">Contact</a></div><div class="lang-switch" role="navigation" aria-label="Language"><a href="/3-gate/" lang="ru" hreflang="ru">RU</a><span aria-hidden="true">/</span><a href="/en/3-gate/" lang="en" hreflang="en" aria-current="page">EN</a></div></nav></div></header>
+<main>
+<section class="hero" style="border-top:0"><div class="wrap"><div class="eyebrow">Integration Platform</div><h1>Data moves.<br>Integration stays under control.</h1><p class="lead">HONTI 3-Gate is a standalone integration runtime for SAP and other enterprise sources. It handles extraction, incremental loading, error recovery and data delivery, independently of DWH business logic.</p><div class="actions"><a class="btn primary" href="/en/#contact">Discuss a pilot</a><a class="btn secondary" href="#product">How it works</a></div></div></section>
+<section id="product"><div class="wrap"><div class="kicker">Product scope</div><h2 class="display">3-Gate handles data extraction and reliable delivery.</h2><p class="sub">Process orchestration stays in Flow; modeling and transformations stay in the Data Platform. Deploy 3-Gate independently or use it as the integration layer of the HONTI platform.</p>
+<div class="arch"><div class="arch-box"><strong>Sources</strong><p>SAP RFC · OData · CDS · API · DB · Files</p></div><div class="arrow">→</div><div class="arch-box"><strong>HONTI 3-Gate</strong><p>metadata · schema · watermark · retry · checkpoint · routing · audit</p></div><div class="arrow">→</div><div class="arch-box"><strong>Sinks</strong><p>S3 / Parquet · ClickHouse · PostgreSQL · Kafka</p></div></div>
+<div class="grid">
+<article class="card"><div class="num">01</div><h3>Incremental by design</h3><p>Watermarks and execution state are stored separately from business logic. A restart resumes the load instead of starting over.</p></article>
+<article class="card"><div class="num">02</div><h3>Schema-aware</h3><p>The runtime reads source metadata. Strict, compatible and evolve policies control schema changes.</p></article>
+<article class="card"><div class="num">03</div><h3>Recoverable</h3><p>Staging, atomic publication, retries and checkpoints protect the target from incomplete loads.</p></article>
+</div></div></section>
+<section id="flow"><div class="wrap split"><div><div class="kicker">HONTI Flow + 3-Gate</div><h2 class="display" style="font-size:clamp(34px,4.5vw,62px)">A standalone product. The integration runtime within Flow.</h2><p class="sub">The dependency runs one way: Flow calls 3-Gate, while 3-Gate is independent of Flow. The runtime can therefore be used in other environments.</p></div><div><div class="status">HONTI 3-Gate</div><div class="flow-box">Analyzer
+   ↓ metadata / dependencies
+Flow
+   ↓ extraction job
+3-Gate
+   ↓ canonical/raw dataset
+S3 / ClickHouse / PostgreSQL
+   ↓
+Data Platform / DWH</div><div class="feature-list"><div class="feature"><strong>Flow decides when</strong><p>Scheduling, dependencies, branching and pipeline sequencing.</p></div><div class="feature"><strong>3-Gate handles how</strong><p>Connections, extraction, schema mapping, deltas, retries, checkpoints and delivery.</p></div></div></div></div></section>
+<section><div class="wrap"><div class="kicker">Getting connected</div><h2 class="display" style="font-size:clamp(34px,4.5vw,62px)">Start with one data flow.</h2><p class="sub">We will define the source, target storage, incremental loading rules and result checks, tailoring the integration to your system and requirements.</p></div></section>
+<section class="cta"><div class="wrap"><div class="cta-box"><div class="kicker">Pilot</div><h2 class="cta-title">Test 3-Gate on a real SAP data flow.</h2><p class="cta-sub">Start with one RFC or OData source and one target store, without changing your existing DWH.</p><div class="actions"><a class="btn primary" href="mailto:info@honti-it.ru?subject=HONTI%203-Gate">Discuss HONTI 3-Gate</a><a class="btn secondary" href="/en/">Home</a></div></div></div></section>
+</main>
+<footer><div class="wrap footer-row"><span>© 2026 HONTI LLC</span><span>HONTI 3-Gate · Integration Platform</span></div></footer>
+</body></html>
