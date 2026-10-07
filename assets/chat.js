@@ -45,6 +45,11 @@
   panel.querySelector('.hc-head button').onclick = close;
   panel.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
   document.addEventListener('visibilitychange', () => document.hidden ? clearTimeout(timer) : poll());
+  input.addEventListener('keydown', e => {
+    if (e.key !== 'Enter' || e.shiftKey || e.isComposing || e.keyCode === 229) return;
+    e.preventDefault();
+    if (!e.repeat && !busy) form.requestSubmit();
+  });
   form.onsubmit = async e => {
     e.preventDefault(); const text = input.value.trim(); if (!text || busy || !endpoint) return;
     busy = true; send.disabled = true; clearTimeout(timer); status.textContent = 'Отправляем…';
