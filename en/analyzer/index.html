@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="HONTI Analyzer maps SAP landscape dependencies for data lineage, impact analysis and migration planning." />
+  <title>HONTI Analyzer — Understand Your SAP Landscape</title>
+  <style>
+    :root{
+      --bg:#f6f6f3;
+      --text:#111214;
+      --muted:#6f747a;
+      --line:#d9dbdd;
+      --card:#fff;
+      --max:1180px;
+      --dark:#202b35;
+      --dark2:#182129;
+      --dark3:#27333e;
+      --sap-blue:#7fc3f0;
+      --sap-pink:#ff7b86;
+      --sap-yellow:#ffc86b;
+      --sap-green:#8fd49b;
+      --sap-orange:#ef941e;
+      --sap-line:#afbac3;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+    header{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter:blur(12px);
+      background:rgba(246,246,243,.86);
+      border-bottom:1px solid rgba(17,18,20,.08);
+    }
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-size:20px;font-weight:800;letter-spacing:.12em}
+    .navlinks{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+    .navlinks a:hover{color:var(--text)}
+    .hero{padding:112px 0 76px}
+    .eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+    h1{margin:0;max-width:1040px;font-size:clamp(50px,8.4vw,108px);line-height:.92;letter-spacing:-.058em;font-weight:760}
+    .lead{margin:30px 0 0;max-width:820px;font-size:clamp(19px,2vw,27px);line-height:1.35;color:#3f4449}
+    .hero-actions{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:999px;border:1px solid var(--text);font-size:14px;font-weight:650}
+    .btn.primary{background:var(--text);color:#fff}
+    .btn.secondary{background:transparent}
+    section{padding:90px 0;border-top:1px solid var(--line)}
+    .section-kicker{font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:30px}
+    .display-copy{max-width:1000px;margin:0;font-size:clamp(34px,5vw,70px);line-height:1.02;letter-spacing:-.045em}
+    .subcopy{max-width:760px;margin:26px 0 0;color:var(--muted);font-size:18px}
+    .quiet{color:var(--muted)}
+
+    /* Embedded interactive application */
+    .mvp-shell{margin-top:52px;background:var(--dark2);border:1px solid #3a4650;border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(17,18,20,.16)}
+    .statement{margin-top:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:end}
+    .statement p{margin:0;font-size:clamp(25px,3.3vw,46px);line-height:1.08;letter-spacing:-.035em}
+    .statement aside{color:var(--muted);font-size:16px;max-width:380px}
+
+    .value-grid{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .value{min-height:245px;background:var(--card);border:1px solid #e5e6e7;border-radius:22px;padding:28px}
+    .value .num{font-size:12px;color:var(--muted);letter-spacing:.12em;margin-bottom:38px}
+    .value h3{margin:0 0 14px;font-size:26px;letter-spacing:-.025em}
+    .value p{margin:0;color:var(--muted);font-size:16px}
+
+    .split{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
+    .feature-list{border-top:1px solid var(--line)}
+    .feature{padding:25px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:130px 1fr;gap:25px}
+    .feature span{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+    .feature strong{font-size:21px;font-weight:620;letter-spacing:-.015em}
+    .feature p{grid-column:2;margin:7px 0 0;color:var(--muted);font-size:15px}
+
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:46px}
+    .step{padding:30px 28px 34px 0;border-right:1px solid var(--line)}
+    .step+.step{padding-left:28px}.step:last-child{border-right:0}
+    .step strong{display:block;font-size:30px;letter-spacing:-.03em;margin-bottom:12px}
+    .step p{margin:0;color:var(--muted);font-size:16px}
+
+    .cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-top:42px}
+    .cap{background:var(--bg);padding:30px;min-height:180px}
+    .cap-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+    .cap h3{margin:0;font-size:24px;letter-spacing:-.02em}
+    .tag{font-size:11px;text-transform:uppercase;letter-spacing:.1em;padding:7px 10px;border:1px solid #cfd2d4;border-radius:999px;color:var(--muted);white-space:nowrap}
+    .tag.live{background:#111214;color:#fff;border-color:#111214}
+    .cap p{margin:0;color:var(--muted);font-size:16px;max-width:500px}
+
+    .cta{padding:112px 0}
+    .cta-box{background:#111214;color:#fff;border-radius:30px;padding:54px}
+    .cta-box .section-kicker{color:#989da3}
+    .cta-title{margin:0;max-width:880px;font-size:clamp(40px,6vw,80px);line-height:.98;letter-spacing:-.05em}
+    .cta-sub{margin:24px 0 0;color:#afb4b9;max-width:650px;font-size:18px}
+    .cta-actions{margin-top:34px}.cta .btn{border-color:#fff}.cta .btn.primary{background:#fff;color:#111214}
+
+    footer{padding:28px 0 38px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+    @media(max-width:900px){
+      .navlinks{display:none}.value-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.step,.step+.step{padding:24px 0;border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}.cap-grid{grid-template-columns:1fr}.split,.statement{grid-template-columns:1fr;gap:34px}.hero{padding-top:82px}.cta-box{padding:34px}.mvp-shell{border-radius:18px}
+    }
+    @media(max-width:620px){.wrap{width:min(calc(100% - 26px),var(--max))}section{padding:70px 0}.hero{padding:72px 0 56px}.feature{grid-template-columns:1fr;gap:7px}.feature p{grid-column:1}}
+  </style>
+<link rel="canonical" href="https://honti-it.ru/en/analyzer/" />
+<link rel="alternate" hreflang="ru" href="https://honti-it.ru/analyzer/" />
+<link rel="alternate" hreflang="en" href="https://honti-it.ru/en/analyzer/" />
+<link rel="alternate" hreflang="x-default" href="https://honti-it.ru/analyzer/" />
+<link rel="stylesheet" href="/assets/languages.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="/en/">HONTI</a>
+        <div class="navlinks">
+          <a href="#mvp">Demo</a>
+          <a href="#value">Capabilities</a>
+          <a href="#how">How it works</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#contact">Contact</a>
+        </div>
+      <div class="lang-switch" role="navigation" aria-label="Language"><a href="/analyzer/" lang="ru" hreflang="ru">RU</a><span aria-hidden="true">/</span><a href="/en/analyzer/" lang="en" hreflang="en" aria-current="page">EN</a></div></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="border-top:0">
+      <div class="wrap">
+        <div class="eyebrow">HONTI Analyzer · SAP landscape intelligence</div>
+        <h1>See the whole SAP landscape.</h1>
+        <p class="lead">HONTI Analyzer maps SAP object dependencies in an interactive graph — from source systems and data sources to storage, transformations, providers and analytics.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Discuss a pilot</a>
+          <a class="btn secondary" href="#mvp">Explore the demo</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mvp">
+      <div class="wrap">
+        <div class="section-kicker">Interactive graph</div>
+        <p class="display-copy">With thousands of objects, understanding their connections matters.</p>
+        <p class="subcopy">Explore the interactive graph, select an object and trace its dependencies. The timeline shows fictional stages in the evolution of a demo landscape. No SAP connection is required. The demo interface is currently in Russian.</p>
+
+        <div class="mvp-shell" style="background:#f6f6f3">
+          <iframe id="analyzer-demo" src="/analyzer/demo/" title="HONTI Analyzer interactive demo (Russian)" loading="lazy" style="display:block;width:100%;height:1100px;border:0"></iframe>
+        </div>
+        <p class="subcopy"><a href="/analyzer/demo/" target="_blank" rel="noopener">Open the demo in a new window (Russian) ↗</a></p>
+
+        <div class="statement">
+          <p>Explore one connected path from the source system to the final report.</p>
+          <aside>The demo includes search, filters, graph and table views, object properties, dependency paths and change history. You can upload your own JSON dataset for local exploration.</aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="value">
+      <div class="wrap">
+        <div class="section-kicker">Why it matters</div>
+        <p class="display-copy">Less manual investigation. A clearer understanding of your system.</p>
+        <div class="value-grid">
+          <article class="value"><div class="num">01</div><h3>Data Lineage</h3><p>Trace the technical data path from source to analytics, including intermediate transformations.</p></article>
+          <article class="value"><div class="num">02</div><h3>Dependency Analysis</h3><p>Understand actual object dependencies and quickly identify complex or highly connected parts of the architecture.</p></article>
+          <article class="value"><div class="num">03</div><h3>Landscape Discovery</h3><p>Build a shared technical map from fragmented documentation, spreadsheets and individual expertise.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <div>
+          <div class="section-kicker">Use cases</div>
+          <p class="display-copy" style="font-size:clamp(34px,4.4vw,61px)">From “What is this?” to “What will change?”</p>
+        </div>
+        <div class="feature-list">
+          <div class="feature"><span>Architecture</span><strong>Understand an existing SAP landscape.</strong><p>Systems, sources, transformations, storage, HANA objects, providers and analytics in one model.</p></div>
+          <div class="feature"><span>Support</span><strong>Find related objects quickly.</strong><p>Explore a focused graph around a selected object instead of searching manually one step at a time.</p></div>
+          <div class="feature"><span>Changes</span><strong>Assess the potential scope of impact.</strong><p>The graph model provides a foundation for automated upstream and downstream impact analysis.</p></div>
+          <div class="feature"><span>Migration</span><strong>Break a large landscape into understandable paths.</strong><p>Dependencies help identify related groups of objects and plan migration waves.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-kicker">How it works</div>
+        <p class="display-copy">Collect. Connect. Analyze.</p>
+        <div class="steps">
+          <div class="step"><strong>Collect</strong><p>The demo uses fictional data and supports your own JSON files. Connecting a SAP source is a separate step.</p></div>
+          <div class="step"><strong>Connect</strong><p>Normalize objects and dependencies into a graph: objects become nodes and technical dependencies become edges.</p></div>
+          <div class="step"><strong>Analyze</strong><p>Explore paths, filter the landscape and use the graph to analyze changes, architecture and migration.</p></div>
+        </div>
+        <p class="subcopy">The planned solution automates metadata collection using the same approach: capture the landscape state, then analyze the stored model rather than rebuilding it for every user request.</p>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <div class="wrap">
+        <div class="section-kicker">Capabilities and roadmap</div>
+        <p class="display-copy">Next step — connect your data!</p>
+        <div class="cap-grid">
+          <article class="cap"><div class="cap-row"><h3>Dependency Graph</h3><span class="tag live">Demo</span></div><p>Interactive graph and table views of dependencies, with filtering and object exploration.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Metadata Collection</h3><span class="tag">Next step</span></div><p>Connect to SAP technical metadata and store a normalized model for repeated analysis.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Automated Discovery</h3><span class="tag">Roadmap</span></div><p>Automated collection rules, versioned scans and repeatable landscape mapping.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Landscape Snapshots</h3><span class="tag live">Demo</span></div><p>Compare snapshots and replay a fictional history in the browser demo. Automated collection of real snapshots is the next step.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Impact Analysis</h3><span class="tag live">Demo</span></div><p>Upstream and downstream traversal is available in the demo. Criticality assessment and business impact analysis are planned.</p></article>
+          <article class="cap"><div class="cap-row"><h3>Migration Assessment</h3><span class="tag">Roadmap</span></div><p>Assess migration complexity and dependency criticality, map targets and plan the migration sequence.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap">
+        <div class="cta-box">
+          <div class="section-kicker">HONTI Analyzer</div>
+          <p class="cta-title">Turn thousands of technical objects into an understandable system.</p>
+          <p class="cta-sub">Get in touch to explore your SAP landscape dependencies or discuss a pilot with real data.</p>
+          <div class="cta-actions"><a class="btn primary" href="mailto:info@honti-it.ru?subject=HONTI%20Analyzer">info@honti-it.ru</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© 2026 HONTI LLC · HONTI Analyzer</span>
+    </div>
+  </footer>
+<script>
+    // The embedded app has a different height on narrow screens and when controls expand.
+    const analyzerFrame = document.getElementById('analyzer-demo');
+    analyzerFrame.addEventListener('load', () => {
+      const inner = analyzerFrame.contentDocument;
+      if (!inner || !inner.body) return;
+      const resize = () => { analyzerFrame.style.height = Math.ceil(inner.documentElement.scrollHeight + 2) + 'px'; };
+      new ResizeObserver(resize).observe(inner.body);
+      resize();
+    });
+  </script>
+</body>
+</html>
+

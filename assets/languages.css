@@ -1,0 +1,2 @@
+
+.lang-switch{display:inline-flex;align-items:center;gap:8px;flex-shrink:0;font-size:13px;letter-spacing:.04em;white-space:nowrap}.lang-switch a{padding:8px 4px;color:#565c62}.lang-switch a[aria-current="page"]{color:#111214;font-weight:750;text-decoration:underline;text-underline-offset:5px}.lang-switch a:focus-visible{outline:2px solid #111214;outline-offset:3px}.lang-switch span{color:#92979c}@media(max-width:620px){header nav{gap:12px}.lang-switch{font-size:12px}header:has(> .brand){flex-wrap:wrap;gap:12px}header:has(> .brand)>a:not(.brand){font-size:12px}}
