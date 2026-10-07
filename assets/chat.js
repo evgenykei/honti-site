@@ -7,7 +7,7 @@
   const panel = document.createElement('div'); panel.className = 'hc-panel'; panel.id = 'honti-chat'; panel.hidden = true;
   panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-label', 'Связь с командой ХОНТИ');
   // This template is static. Visitor and operator text is inserted with textContent only.
-  panel.innerHTML = `<div class="hc-head"><strong>Связь с командой ХОНТИ</strong><button aria-label="Закрыть чат">×</button></div><div class="hc-log" role="log" aria-live="polite"></div><div class="hc-status" role="status"></div><form class="hc-form"><textarea aria-label="Сообщение" maxlength="2000" placeholder="Расскажите о задаче" required></textarea><input class="hc-trap" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><button type="submit">Отправить</button></form><div class="hc-links"><a href="mailto:info@honti-it.ru">Почта</a><a href="https://max.ru/id9719090088_bot" target="_blank" rel="noopener">MAX</a><a href="tel:+79957800111">Позвонить</a></div>`;
+  panel.innerHTML = `<div class="hc-head"><strong>Связь с командой ХОНТИ</strong><button aria-label="Закрыть чат">×</button></div><div class="hc-log" role="log" aria-live="polite"></div><div class="hc-status" role="status"></div><form class="hc-form"><textarea aria-label="Сообщение" maxlength="2000" placeholder="Расскажите о задаче" required></textarea><input class="hc-trap" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><button type="submit">Отправить</button></form><div class="hc-links"><a href="mailto:info@honti-it.ru">Почта</a><a href="tel:+79957800111">Позвонить</a></div>`;
   document.body.append(launch, panel);
   const log = panel.querySelector('.hc-log'), status = panel.querySelector('.hc-status');
   const form = panel.querySelector('form'), input = form.querySelector('textarea'), send = form.querySelector('button');
@@ -39,7 +39,7 @@
   launch.onclick = () => {
     if (!panel.hidden) return close();
     panel.hidden = false; launch.setAttribute('aria-expanded','true');
-    status.textContent = endpoint ? 'Напишите нам — ответим в этом чате.' : 'Чат подключается. Пока можно написать в MAX или на почту.';
+    status.textContent = endpoint ? 'Напишите нам — ответим в этом чате.' : 'Чат подключается. Пока можно написать на почту или позвонить.';
     form.hidden = !endpoint; input.focus(); poll();
   };
   panel.querySelector('.hc-head button').onclick = close;
